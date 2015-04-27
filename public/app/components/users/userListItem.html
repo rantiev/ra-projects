@@ -1,0 +1,17 @@
+<div ui-draggable="true"
+     ui-on-Drop="removeProjectPosition($data)"
+     drag="man"
+     drop-channel="positions"
+     drag-channel="users"
+     ng-class="{free: true == man.freedom, busy: false == man.freedom }">
+	<a ui-sref="user({id: man._id})">
+		<span>
+			<img ng-src="{{man.img}}" alt="{{man.name}}"/>
+			<div class="overlay"></div>
+			<span class="ps-user-delete" ng-show="deleteProcessStarted" ng-click="deleteUser(man._id)">
+				<i class="glyphicon glyphicon-remove-sign"></i>
+			</span>
+		</span>
+		<span>{{man.name}}</span>
+	</a>
+</div>

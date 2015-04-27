@@ -1,0 +1,33 @@
+<div class="ps-panel ps-layout-user-profile">
+
+	<div class="row">
+		<div class="col-sm-4">
+			<h1>{{user.name}} <span ui-sref="userEdit({id: user._id})" class="btn btn-primary"><i class="glyphicon glyphicon-edit"></i></span></h1>
+			{{user.role}} ({{user.level}})
+
+			<h4>Experience</h4>
+			<div ng-repeat="skill in user.skills">
+				<div class="form-group">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="row">
+								<div class="col-sm-6">
+									{{skill.name}}
+								</div>
+								<div class="col-sm-6">
+									{{skill.years}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+		<div class="col-sm-4">
+			<img src="{{user.img}}" class="ps-avatar-big" alt=""/><br />
+		</div>
+	</div>
+</div>

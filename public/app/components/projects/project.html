@@ -1,0 +1,12 @@
+<div class="project">
+	<div class="navbar-right">
+		<span ui-sref="projectEdit({id: project._id})" class="btn btn-primary"><i class="glyphicon glyphicon-edit"></i></span>
+	</div>
+	<h3>{{project.name}}</h3>
+	<ul class="people-list people-list-small">
+		<li ng-repeat="position in project.positions"><div data-position></div></li>
+	</ul>
+	<div class="projectDates">
+		<span>{{project.startDate | date}}</span> <span>-</span> <span>{{project.endDate | date}}</span>
+	</div>
+</div>

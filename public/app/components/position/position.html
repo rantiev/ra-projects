@@ -1,0 +1,14 @@
+<div ui-on-Drop="fillProjectPosition($data)"
+	drag-enter-class="drop-entered"
+	drag-hover-class="drop-active"
+	ui-draggable="true"
+	drag-channel="positions"
+	drop-channel="users"
+	drag="[project._id, position.id, position.employeeID]"
+>
+	<span>
+		<img ng-src="{{position.employee.img || 'img/empty.jpg'}}" alt="{{position.employee.name || position.title}}"/>
+		<div class="overlay"></div>
+	</span>
+	<span>{{position.employee.name || position.title}}</span>
+</div>

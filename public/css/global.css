@@ -1,0 +1,232 @@
+html,
+body {
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #858585;
+    margin: 20px 0;
+}
+
+.all {
+    height: 100%;
+    padding-top: 52px;
+}
+
+[ui-draggable] {
+    cursor: pointer;
+    z-index: 100;
+}
+
+ul {
+    list-style: none;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.people-list,
+.projects-list ul {
+    -webkit-padding-start: 0;
+    -webkit-margin-before: 0;
+}
+
+.people-list li {
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+}
+
+.people-list li span {
+    display: block;
+}
+
+.people-list li span:first-child {
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    position: relative;
+    border-radius: 50%;
+}
+
+.ps-avatar-big {
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    position: relative;
+    border-radius: 50%;
+}
+
+.ps-layout-user-create .ps-avatar-big {
+    margin-top:10px;
+}
+
+.people-list li span:first-child img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.people-list li .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    text-align: center;
+    display: table;
+    -webkit-transform: travslate3d(0, 0, 0);
+    -moz-transform: travslate3d(0, 0, 0);
+    -ms-transform: travslate3d(0, 0, 0);
+    -o-transform: travslate3d(0, 0, 0);
+    transform: travslate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.people-list li:hover .overlay {
+    opacity: 1;
+}
+
+.people-list li .overlay > div {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.people-list li .overlay span {
+    display: inline-block;
+    color: lightgray;
+    font-size: 11px;
+    line-height: 16px;
+    margin: 0;
+    padding: 0 5px;
+}
+
+.busy img {
+    border: 2px solid red;
+}
+
+.free img {
+    border: 2px solid darkseagreen;
+}
+
+.projects-list {
+    display: block;
+}
+
+.projects-list > li {
+    display: block;
+}
+
+.projects-list li ul {
+    min-height: 200px;
+}
+
+.projects-list .drop-entered img {
+    opacity: 0.3;
+}
+
+.projects-list .drop-active img {
+    opacity: 0.5;
+}
+
+.projects-list .drop-entered .overlay {
+    background: lightyellow;
+}
+
+.projects-list .drop-active .overlay {
+    background: darkseagreen;
+}
+
+.projects-list .people-list li span:first-child {
+    width: 70px;
+    position: relative;
+}
+
+.projects-list .people-list li .overlay {
+    width: 70px;
+    height: 70px;
+}
+
+.project {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px dashed lightblue;
+    border-radius: 10px;
+    position: relative;
+}
+
+.ps-project-delete {
+    font-size: 26px;
+    line-height: 26px;
+    position: absolute;
+    top: -13px;
+    left: -13px;
+    color: lightcoral;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.ps-user-delete {
+    font-size: 26px;
+    line-height: 26px;
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    color: lightcoral;
+    cursor: pointer;
+}
+
+.ps-view {
+    height: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    position:relative;
+}
+
+.ps-panel {
+    padding:15px;
+}
+
+.ui-splitbar {
+    background:#E7E7E7;
+}
+
+
+.ps-man-info-skills,
+.ps-man-info-projects {
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.ps-man-info-role {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.projectDates span:first-child {
+    color: cornflowerblue;
+}
+
+.projectDates span:last-child {
+    color: green;
+}

@@ -1,6 +1,6 @@
-myApp.controller('dashboardController', function($scope, users, projects) {
+myApp.controller('dashboardController', function($scope/*, users, projects*/) {
 
-	$scope.users = users.data;
+	/*$scope.users = users.data;
 	$scope.projects = projects.data;
 
 	$scope.setUser = function(user){
@@ -13,6 +13,6 @@ myApp.controller('dashboardController', function($scope, users, projects) {
 		var newProjects = _.find($scope.projects, {_id: project._id});
 		newProjects = project;
 		return project;
-	}
+	}*/
 
 });

@@ -1,5 +1,7 @@
 myApp.controller('main', function($scope){
 
+	$scope.userLoggedIn = false;
+
 	$scope.currentMan = null;
 
 	$scope.setCurrentMan = function(o){

@@ -1,16 +1,19 @@
 var myApp = angular.module('myApp', ['ui.router', 'ui.layout', 'toaster', 'ang-drag-drop'])
 
-.run(
-	function ($rootScope, $state, $stateParams) {
+.run(['$rootScope', '$state', '$timeout',
+	function ($rootScope, $state, $timeout) {
 
-		$rootScope.$state = $state;
-		$rootScope.$stateParams = $stateParams;
+		$rootScope.$on( "$stateChangeStart", function(event, toState, toParams, fromState, fromParams) {
 
-		/*$rootScope.$on('$stateChangeStart', function(event, toState){
-			console.log($rootScope.$state.current.name);
-		})*/
+			/*if(toState.name !== 'login'){
+				$timeout(function(){
+					$state.go('login');
+				});
+			}*/
 
-	}
+		});
+
+	}]
 )
 
 .config(function($stateProvider, $httpProvider, $urlRouterProvider) {
@@ -20,11 +23,30 @@ var myApp = angular.module('myApp', ['ui.router', 'ui.layout', 'toaster', 'ang-d
 	$urlRouterProvider.otherwise('/');
 
 	$stateProvider
+		.state('login', {
+			url: '/login',
+			templateUrl: 'app/components/login/login.html',
+			controller: 'loginController',
+			/*resolve: {
+			 users: function($http){
+			 return $http({
+			 method: 'GET',
+			 url: '/users/'
+			 });
+			 },
+			 projects: function($http){
+			 return $http({
+			 method: 'GET',
+			 url: '/projects/'
+			 });
+			 }
+			 }*/
+		})
 		.state('home', {
 			url: '/',
 			templateUrl: 'app/components/dashboard/dashboard.html',
 			controller: 'dashboardController',
-			resolve: {
+			/*resolve: {
 				users: function($http){
 					return $http({
 						method: 'GET',
@@ -37,7 +59,7 @@ var myApp = angular.module('myApp', ['ui.router', 'ui.layout', 'toaster', 'ang-d
 						url: '/projects/'
 					});
 				}
-			}
+			}*/
 		})
 		.state('projects', {
 			url: '/projects',

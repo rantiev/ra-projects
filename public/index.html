@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
 <head>
-	<title>Ang learning!</title>
+	<title>Ra Projects</title>
 
 	<base href="/">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="bootstrap-3.3.0-dist/dist/css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="jquery-ui/jquery-ui.min.css"/>
+	<link rel="stylesheet" href="3dParty/bootstrap/dist/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="app/modules/ui-layout/ui-layout.css"/>
 	<link rel="stylesheet" href="app/modules/toaster/toaster.css"/>
 	<link rel="stylesheet" href="css/global.css"/>
@@ -29,8 +28,9 @@
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li ui-sref-active="active"><a ui-sref="projects">Projects</a></li>
-					<li ui-sref-active="active"><a ui-sref="users">Team</a></li>
+					<li ng-if="userLoggedIn" ui-sref-active="active"><a ui-sref="projects">Projects</a></li>
+					<li ng-if="userLoggedIn" ui-sref-active="active"><a ui-sref="users">Team</a></li>
+					<li ng-if="userLoggedIn"><a ui-sref="logout">Logout</a></li>
 				</ul>
 				<div class="navbar-right">
 					<form class="navbar-form" ng-show="$state.current.name == 'projects'">
@@ -50,12 +50,13 @@
 	</div>
 </div>
 <script src="scripts/helpers.js"></script>
-<script src="scripts/lodash.min.js"></script>
+<script src="3dParty/lodash/lodash.min.js"></script>
 
-<script src="angular-1.3.0/angular.min.js"></script>
-<!--<script src="angular-1.3.0/angular-route.min.js"></script>-->
-<script src="angular-1.3.0/angular-resource.min.js"></script>
-<script src="angular-1.3.0/angular-animate.min.js"></script>
+<script src="3dParty/angular/angular.min.js"></script>
+
+<script src="3dParty/angular/angular-resource.min.js"></script>
+<script src="3dParty/angular/angular-animate.min.js"></script>
+
 <script src="app/modules/ui-layout/ui-layout.js"></script>
 <script src="app/modules/angular-ui-router.min.js"></script>
 <script src="app/modules/toaster/toaster.js"></script>
@@ -63,6 +64,8 @@
 
 <script src="app/myApp.js"></script>
 <script src="app/main.js"></script>
+
+<script src="app/components/login/loginController.js"></script>
 
 <script src="app/components/dashboard/dashboardController.js"></script>
 
@@ -85,19 +88,5 @@
 
 <script src="app/components/position/positionDirective.js"></script>
 
-<!--<script src="app/services/employees.js"></script>-->
-
-<!--<script src="app/controllers/main.js"></script>-->
-<!--
-<script src="app/controllers/employees.js"></script>
-<script src="app/controllers/info.js"></script>
--->
-
-
-<!--<script src="app/directives/project.js"></script>
-<script src="app/directives/employee.js"></script>
-<script src="app/directives/position.js"></script>-->
-
-<script src="scripts/ui-bootstrap-tpls-0.11.2.min.js"></script>
 </body>
 </html>

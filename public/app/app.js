@@ -58,4 +58,19 @@ var myApp = angular.module('ra-projects', ['ui.router', 'ui.layout', 'toaster', 
 				templateUrl: 'app/components/dashboard/dashboard.html',
 				controller: 'dashboardController'
 			})
+			.state('projects', {
+				url: '/',
+				templateUrl: 'app/components/dashboard/dashboard.html',
+				controller: 'dashboardController'
+			})
+			.state('settings', {
+				url: '/',
+				templateUrl: 'app/components/dashboard/dashboard.html',
+				controller: 'dashboardController'
+			})
+			.state('profile', {
+				url: '/',
+				templateUrl: 'app/components/dashboard/dashboard.html',
+				controller: 'dashboardController'
+			})
 	});

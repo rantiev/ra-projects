@@ -23,12 +23,14 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" ui-sref="home">Ra Projects</a>
+				<a class="navbar-brand" ui-sref="dashboard">Ra Projects</a>
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
+					<li ng-if="userCan" ui-sref-active="active"><a ui-sref="dashboard">Dashboard</a></li>
 					<li ng-if="userCan" ui-sref-active="active"><a ui-sref="projects">Projects</a></li>
-					<li ng-if="userCan" ui-sref-active="active"><a ui-sref="users">Team</a></li>
+					<li ng-if="userCan" ui-sref-active="active"><a ui-sref="settings">Settings</a></li>
+					<li ng-if="userCan" ui-sref-active="active"><a ui-sref="profile">Profile</a></li>
 				</ul>
 				<div class="navbar-right">
 					<ul class="nav navbar-nav">

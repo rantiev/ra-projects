@@ -1,0 +1,9 @@
+<h3>Projects</h3>
+<a class="btn btn-primary" ui-sref="main.private.project-new">Add project</a>
+<ul class="ra-projects-list">
+	<li  class="ra-projects-list-item" ng-repeat="project in projects">
+		<a ui-sref="main.private.project({id: project._id})">
+			<span class="ra-projects-list-item-image"><img src="/uploads/StarCraft.png" alt="{{project.name}}"/></span>
+		</a>
+	</li>
+</ul>

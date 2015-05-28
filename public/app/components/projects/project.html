@@ -1,0 +1,31 @@
+<h3>
+	{{project.name}}
+	<a class="ra-title-btn" data-ui-sref="main.private.project-edit({id: project._id})"><i class="glyphicon glyphicon-edit"></i></a>
+</h3>
+<p>
+	<a class="btn btn-primary" data-ui-sref="main.private.ticket-new({projectID: project._id})"><i class="glyphicon glyphicon-plus"></i> New Ticket</a>
+</p>
+
+<div class="ra-tickets-grid" data-ng-if="tickets.length">
+	<div class="ra-tickets-row">
+		<div class="ra-tickets-column-heading" style="width:{{100/project.statuses.length}}%" data-ng-repeat="status in project.statuses">
+			{{status.name}}
+		</div>
+	</div>
+	<div class="ra-tickets-row">
+		<div class="ra-tickets-column" style="width:{{100/project.statuses.length}}%" data-ng-repeat="status in project.statuses">
+
+			<div data-ui-sref="main.private.ticket({id:ticket._id, projectID:project._id})" class="ra-project-ticket ra-ticket-{{ticket.color}}" data-ng-repeat="ticket in tickets | filter: {status: status._id}">
+				<div class="ra-ticket-label">{{ticket.label}}</div>
+				<div class="ra-ticket-name">{{ticket.name}}</div>
+				<div class="ra-ticket-asignee">{{users[ticket.user].fname}} {{users[ticket.user].lname}}</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="alert alert-warning" data-ng-if="!tickets.length">
+	<p>There are no tickets for this project yet.</p>
+</div>
+

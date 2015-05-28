@@ -8,10 +8,16 @@ myApp.controller('registrationController', ['toaster', 'usersService', '$state',
 			lname: $scope.raFormInputLastName,
 			password: $scope.raFormInputPassword,
 			remember: $scope.raFormInputRememberMe
-		}).then(function(){
-			$state.go('login');
-			toaster.pop("success", "", "You have registered succesfully", 3000);
-		});
+		}).then(
+			function success(response){
+				$state.go('main.private.projects');
+				toaster.pop("success", "", "You have registered succesfully", 3000);
+			},
+			function error(reason){
+				$state.go('main.public.registration');
+				toaster.pop("error", "", "You have not registered succesfully", 3000);
+			}
+		);
 
 	}
 

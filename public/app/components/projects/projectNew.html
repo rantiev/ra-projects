@@ -1,0 +1,40 @@
+<h3>New Project</h3>
+<div class="row">
+	<div class="col-sm-4">
+		<form data-ng-show="!inProgress">
+			<div class="form-group">
+				<input type="text" class="form-control" name="raFormInputProjectName" id="raFormInputProjectName" placeholder="Name" data-ng-model="project.name">
+			</div>
+			<div class="form-group">
+				<textarea class="form-control" name="raFormInputProjectDescription" id="raFormInputProjectName" placeholder="Description" data-ng-model="project.description"></textarea>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 form-group">
+					<h4>Ticket Statuses</h4>
+					<ul class="list-unstyled">
+						<li class="form-group" ng-repeat="status in project.statuses"><input type="text" class="form-control" name="raFormInputProjectStatus" data-ng-model="status.name"></li>
+						<li><button type="submit" data-ng-click="addStatus()" class="btn btn-default">Add Status</button></li>
+					</ul>
+				</div>
+				<div class="col-sm-6 form-group">
+					<h4>Ticket Priorities</h4>
+					<ul class="list-unstyled">
+						<li class="form-group" ng-repeat="priority in project.priorities">
+							<input type="text" class="form-control" name="raFormInputProjectStatus" data-ng-model="priority.name">
+							<select class="form-control" data-ng-model="priority.color">
+								<option value="red">red</option>
+								<option value="orange">orange</option>
+								<option value="yellow">yellow</option>
+								<option value="green">green</option>
+								<option value="blue">blue</option>
+								<option value="gray">gray</option>
+							</select>
+						</li>
+						<li><button type="submit" data-ng-click="addPriority()" class="btn btn-default">Add Priority</button></li>
+					</ul>
+				</div>
+			</div>
+			<button type="submit" data-ng-click="submitForm()" class="btn btn-primary">Create Project</button>
+		</form>
+	</div>
+</div>

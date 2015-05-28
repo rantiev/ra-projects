@@ -1,76 +1,166 @@
 var myApp = angular.module('ra-projects', ['ui.router', 'ui.layout', 'toaster', 'ang-drag-drop'])
 
-	.run(['$rootScope', '$state', '$timeout', 'usersService',
-		function ($rootScope, $state, $timeout, usersService) {
+	.run(['$rootScope', '$state', '$timeout', '$http',
+		function ($rootScope, $state, $timeout, $http) {
 
 			$rootScope.$on("$stateChangeStart", function (event, toState, toParams, fromState, fromParams) {
 
-				usersService.check()
-					.success(function (data, status, headers, config) {
-
-						$rootScope.userCan = true;
-
-						console.log('User can');
-						if (toState.name === 'login' || toState.name === 'registration') {
-							$timeout(function () {
-								$state.go('dashboard');
-							});
+				$http({
+					url: '/check',
+					method: 'post'
+				})
+					.then(
+					function success(response) {
+						$rootScope.userCan = 1;
+						if (toState.public) {
+							$state.go('main.private.projects');
 						}
-					})
-					.error(function (data, status, headers, config) {
-
-						$rootScope.userCan = false;
-
-						console.log('User can\'t');
-						if (toState.name !== 'login' && toState.name !== 'registration') {
-							$timeout(function () {
-								$state.go('login');
-							});
+					},
+					function error(reason) {
+						$rootScope.userCan = 0;
+						if (!toState.public) {
+							$state.go('main.public.login');
 						}
-					});
-
-				$rootScope.currentState = toState;
+					}
+				);
 
 			});
 
 		}]
 	)
 
-	.config(function ($stateProvider, $httpProvider, $urlRouterProvider) {
+	.config(['$stateProvider', '$httpProvider', '$urlRouterProvider', function ($stateProvider, $httpProvider, $urlRouterProvider) {
 
 		$httpProvider.defaults.headers.delete = { "Content-Type": "application/json;charset=utf-8" };
 
-		$urlRouterProvider.otherwise('/');
+		$urlRouterProvider.otherwise('/login');
 
 		$stateProvider
-			.state('login', {
+			.state('main', {
+				abstract: true,
+				templateUrl: 'app/mainTpl.html',
+				controller: 'mainController'
+			})
+			.state('main.public', {
+				abstract: true,
+				public: true,
+				templateUrl: 'app/publicTpl.html'
+			})
+			.state('main.public.login', {
 				url: '/login',
+				public: true,
 				templateUrl: 'app/components/login/login.html',
 				controller: 'loginController'
 			})
-			.state('registration', {
+			.state('main.public.registration', {
 				url: '/registration',
+				public: true,
 				templateUrl: 'app/components/registration/registration.html',
 				controller: 'registrationController'
 			})
-			.state('dashboard', {
-				url: '/',
-				templateUrl: 'app/components/dashboard/dashboard.html',
-				controller: 'dashboardController'
+			.state('main.private', {
+				abstract: true,
+				templateUrl: 'app/privateTpl.html'
 			})
-			.state('projects', {
-				url: '/',
-				templateUrl: 'app/components/dashboard/dashboard.html',
-				controller: 'dashboardController'
+			.state('main.private.projects', {
+				url: '/projects',
+				templateUrl: 'app/components/projects/projects.html',
+				controller: 'projectsController',
+				resolve: {
+					projects: function (projectsService) {
+						return projectsService.getAll();
+					}
+				}
 			})
-			.state('settings', {
-				url: '/',
-				templateUrl: 'app/components/dashboard/dashboard.html',
-				controller: 'dashboardController'
+			.state('main.private.project-new', {
+				url: '/project-new',
+				templateUrl: 'app/components/projects/projectNew.html',
+				controller: 'projectNewController',
+				resolve: {
+					settings: function (settingsService) {
+						return settingsService.getSettings();
+					}
+				}
 			})
-			.state('profile', {
-				url: '/',
-				templateUrl: 'app/components/dashboard/dashboard.html',
-				controller: 'dashboardController'
+			.state('main.private.project', {
+				url: '/project/:id',
+				templateUrl: 'app/components/projects/project.html',
+				controller: 'projectController',
+				resolve: {
+					project: function ($stateParams, projectsService) {
+						return projectsService.getOne($stateParams.id);
+					},
+					tickets: function ($stateParams, ticketsService) {
+						return ticketsService.getAll($stateParams.id);
+					},
+					users: function ($stateParams, usersService) {
+						return usersService.getAll();
+					}
+				}
 			})
-	});
+			.state('main.private.project-edit', {
+				url: '/project/:id/edit',
+				templateUrl: 'app/components/projects/projectEdit.html',
+				controller: 'projectEditController',
+				resolve: {
+					project: function ($stateParams, projectsService) {
+						return projectsService.getOne($stateParams.id);
+					}
+				}
+			})
+			.state('main.private.ticket-new', {
+				url: '/ticket-new/:projectID',
+				templateUrl: 'app/components/tickets/ticketNew.html',
+				controller: 'ticketNewController',
+				resolve: {
+					project: function ($stateParams, projectsService) {
+						return projectsService.getOne($stateParams.projectID);
+					},
+					users: function($stateParams, usersService){
+						return usersService.getAll();
+					}
+				}
+			})
+			.state('main.private.ticket', {
+				url: '/ticket/:id&:projectID',
+				templateUrl: 'app/components/tickets/ticket.html',
+				controller: 'ticketController',
+				resolve: {
+					project: function ($stateParams, projectsService) {
+						return projectsService.getOne($stateParams.projectID);
+					},
+					ticket: function ($stateParams, ticketsService) {
+						return ticketsService.getOne($stateParams.id);
+					},
+					users: function($stateParams, usersService){
+						return usersService.getAll();
+					}
+				}
+			})
+			.state('main.private.ticket-edit', {
+				url: '/ticket/:id&:projectID/edit',
+				templateUrl: 'app/components/tickets/ticketEdit.html',
+				controller: 'ticketEditController',
+				resolve: {
+					project: function ($stateParams, projectsService) {
+						return projectsService.getOne($stateParams.projectID);
+					},
+					ticket: function ($stateParams, ticketsService) {
+						return ticketsService.getOne($stateParams.id);
+					},
+					users: function($stateParams, usersService){
+						return usersService.getAll();
+					}
+				}
+			})
+		/*.state('main.private.settings', {
+		 url: '/settings',
+		 templateUrl: 'app/components/settings/settings.html',
+		 controller: 'settingsController'
+		 })
+		 .state('main.private.profile', {
+		 url: '/profile',
+		 templateUrl: 'app/components/profile/profile.html',
+		 controller: 'profileController'
+		 })*/
+	}]);

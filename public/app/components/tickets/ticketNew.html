@@ -1,0 +1,29 @@
+<h3>New Ticket</h3>
+<form ng-show="!inProgress">
+	<div class="row">
+		<div class="col-sm-4">
+			<div class="form-group">
+				<input type="text" class="form-control" name="raFormInputTicketName" id="raFormInputTicketName" placeholder="Name" data-ng-model="ticket.name">
+			</div>
+			<div class="form-group">
+				<textarea class="form-control" name="raFormInputTicketDescription" id="raFormInputTicketDescription" placeholder="Description" data-ng-model="ticket.description"></textarea>
+			</div>
+			<div class="form-group">
+				<select class="form-control" data-ng-model="ticket.user">
+					<option data-ng-repeat="user in users" value="{{user._id}}">{{user.fname}} {{user.lname}}</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<select class="form-control" data-ng-model="ticket.status">
+					<option data-ng-repeat="status in project.statuses" value="{{status._id}}">{{status.name}}</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<select class="form-control" data-ng-model="ticket.priority">
+					<option data-ng-repeat="priority in project.priorities" value="{{priority._id}}">{{priority.name}}</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<button type="submit" data-ng-click="submitForm()" class="btn btn-primary">Create Ticket</button>
+</form>

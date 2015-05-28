@@ -1,0 +1,40 @@
+<h3>Edit Project <a href="#" class="ra-title-btn" data-ng-click="removeProject()"><i class="glyphicon glyphicon-remove"></i></a></h3>
+<div class="row">
+	<div class="col-sm-4">
+		<form data-ng-show="!inProgress">
+			<div class="form-group">
+				<input type="text" class="form-control" name="raFormInputProjectName" id="raFormInputProjectName" placeholder="Name" data-ng-model="project.name">
+			</div>
+			<div class="form-group">
+				<textarea class="form-control" name="raFormInputProjectDescription" id="raFormInputProjectName" placeholder="Description" data-ng-model="project.description"></textarea>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 form-group">
+					<h4>Ticket Statuses</h4>
+					<ul class="list-unstyled">
+						<li class="form-group" ng-repeat="status in project.statuses"><input type="text" class="form-control" name="raFormInputProjectStatus" data-ng-model="status.name"></li>
+						<li><button type="submit" data-ng-click="addStatus()" class="btn btn-default">Add Status</button></li>
+					</ul>
+				</div>
+				<div class="col-sm-6 form-group">
+					<h4>Ticket Priorities</h4>
+					<ul class="list-unstyled">
+						<li class="form-group" data-ng-repeat="priority in project.priorities">
+							<input type="text" class="form-control" name="raFormInputProjectStatus" data-ng-model="priority.name">
+							<select class="form-control" data-ng-model="priority.color">
+								<option value="red" data-ng-selected="priority.color == 'red'">red</option>
+								<option value="orange" data-ng-selected="priority.color == 'orange'">orange</option>
+								<option value="yellow" data-ng-selected="priority.color == 'yellow'">yellow</option>
+								<option value="green" data-ng-selected="priority.color == 'green'">green</option>
+								<option value="blue" data-ng-selected="priority.color == 'blue'">blue</option>
+								<option value="gray" data-ng-selected="priority.color == 'gray'">gray</option>
+							</select>
+						</li>
+						<li><button type="submit" data-ng-click="addPriority()" class="btn btn-default">Add Priority</button></li>
+					</ul>
+				</div>
+			</div>
+			<button type="submit" data-ng-click="submitForm()" class="btn btn-primary">Update Project</button>
+		</form>
+	</div>
+</div>

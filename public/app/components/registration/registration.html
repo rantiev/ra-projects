@@ -4,6 +4,14 @@
 		<div class="col-sm-2 col-sm-offset-5">
 			<form>
 				<div class="form-group">
+					<select class="form-control" data-ng-model="raFormInputImage">
+						<option selected="selected">Please Select an Image</option>
+						<option
+								ng-repeat="image in raSettings.userImages"
+								value="{{image}}">{{image}}</option>
+					</select>
+				</div>
+				<div class="form-group">
 					<input type="email" class="form-control" name="raFormInputEmail" id="raFormInputEmail" placeholder="Email" data-ng-model="raFormInputEmail">
 				</div>
 				<div class="form-group">

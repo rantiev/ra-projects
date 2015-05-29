@@ -225,6 +225,7 @@ app.put('/project/:id?', function (req, res) {
 
 		proj.name = projectData.name;
 		proj.description = projectData.description;
+		proj.image = projectData.image;
 
 		projectData.statuses.forEach(function (newStatus) {
 			var status = proj.statuses.id(newStatus._id);

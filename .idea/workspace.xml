@@ -2,51 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccc66d94-2774-427c-9d83-29b1c6d3182d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/Diablo2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/Diablo3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/Heroes.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/Heroes3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/NeedForSpeed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/StarCraft.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/mainController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/mainTpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/priorities/priorityM.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/privateTpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/profile/profile.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/profile/profileController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/projects/project.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/projects/projectController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/projects/projectEdit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/projects/projectEditController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/projects/projectNew.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/projects/projectNewController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/projects/projects.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/projects/projectsController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/projects/projectsService.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/publicTpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/settings/settings.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/settings/settingsController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/settings/settingsM.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/settings/settingsService.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/statuses/statusM.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/tickets/ticket.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/tickets/ticketController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/tickets/ticketEdit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/tickets/ticketEditController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/tickets/ticketNew.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/tickets/ticketNewController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/components/tickets/ticketsService.js" />
-      <change type="DELETED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\app\components\dashboard\dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\app\components\dashboard\dashboardController.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/db/local.0" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/db/mongod.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/db/ra-projects.0" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/db/local.ns" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/db/ra-projects.ns" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/db/storage.bson" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/app.js" afterPath="$PROJECT_DIR$/public/app/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/global.css" afterPath="$PROJECT_DIR$/public/css/global.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/mainController.js" afterPath="$PROJECT_DIR$/public/app/mainController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/mainTpl.html" afterPath="$PROJECT_DIR$/public/app/mainTpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/privateTpl.html" afterPath="$PROJECT_DIR$/public/app/privateTpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/projects/project.html" afterPath="$PROJECT_DIR$/public/app/components/projects/project.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/projects/projectController.js" afterPath="$PROJECT_DIR$/public/app/components/projects/projectController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/projects/projectEdit.html" afterPath="$PROJECT_DIR$/public/app/components/projects/projectEdit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/projects/projectNew.html" afterPath="$PROJECT_DIR$/public/app/components/projects/projectNew.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/projects/projectNewController.js" afterPath="$PROJECT_DIR$/public/app/components/projects/projectNewController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/projects/projects.html" afterPath="$PROJECT_DIR$/public/app/components/projects/projects.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/publicTpl.html" afterPath="$PROJECT_DIR$/public/app/publicTpl.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/registration/registration.html" afterPath="$PROJECT_DIR$/public/app/components/registration/registration.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/registration/registrationController.js" afterPath="$PROJECT_DIR$/public/app/components/registration/registrationController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/users/usersService.js" afterPath="$PROJECT_DIR$/public/app/components/users/usersService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/tickets/ticketsService.js" afterPath="$PROJECT_DIR$/public/app/components/tickets/ticketsService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\2048 (1).jpg" afterPath="$PROJECT_DIR$/public/uploads/users/2048 (1).jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\2048 (2).jpg" afterPath="$PROJECT_DIR$/public/uploads/users/2048 (2).jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\2048 (3).jpg" afterPath="$PROJECT_DIR$/public/uploads/users/2048 (3).jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\2048 (4).jpg" afterPath="$PROJECT_DIR$/public/uploads/users/2048 (4).jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\2048.jpg" afterPath="$PROJECT_DIR$/public/uploads/users/2048.jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\5 (1).jpg" afterPath="$PROJECT_DIR$/public/uploads/users/5 (1).jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\5 (2).jpg" afterPath="$PROJECT_DIR$/public/uploads/users/5 (2).jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\5 (3).jpg" afterPath="$PROJECT_DIR$/public/uploads/users/5 (3).jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\5 (4).jpg" afterPath="$PROJECT_DIR$/public/uploads/users/5 (4).jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\5 (5).jpg" afterPath="$PROJECT_DIR$/public/uploads/users/5 (5).jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\5 (6).jpg" afterPath="$PROJECT_DIR$/public/uploads/users/5 (6).jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\5.jpg" afterPath="$PROJECT_DIR$/public/uploads/users/5.jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\ann_doe.jpg" afterPath="$PROJECT_DIR$/public/uploads/users/ann_doe.jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\dan_doe.jpg" afterPath="$PROJECT_DIR$/public/uploads/users/dan_doe.jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\dean_doe.jpg" afterPath="$PROJECT_DIR$/public/uploads/users/dean_doe.jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\empty.jpg" afterPath="$PROJECT_DIR$/public/uploads/users/empty.jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\jack_doe.jpg" afterPath="$PROJECT_DIR$/public/uploads/users/jack_doe.jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\jadd_doe.jpg" afterPath="$PROJECT_DIR$/public/uploads/users/jadd_doe.jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\jane_doe.jpg" afterPath="$PROJECT_DIR$/public/uploads/users/jane_doe.jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\janny_doe.jpg" afterPath="$PROJECT_DIR$/public/uploads/users/janny_doe.jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\john_doe.jpg" afterPath="$PROJECT_DIR$/public/uploads/users/john_doe.jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\maria_doe.jpg" afterPath="$PROJECT_DIR$/public/uploads/users/maria_doe.jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\mark_doe.jpg" afterPath="$PROJECT_DIR$/public/uploads/users/mark_doe.jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\mary_doe.jpg" afterPath="$PROJECT_DIR$/public/uploads/users/mary_doe.jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\img\natali_doe.jpg" afterPath="$PROJECT_DIR$/public/uploads/users/natali_doe.jpg" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\uploads\Diablo2.png" afterPath="$PROJECT_DIR$/public/uploads/projects/Diablo2.png" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\uploads\Diablo3.png" afterPath="$PROJECT_DIR$/public/uploads/projects/Diablo3.png" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\uploads\Heroes.png" afterPath="$PROJECT_DIR$/public/uploads/projects/Heroes.png" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\uploads\Heroes3.png" afterPath="$PROJECT_DIR$/public/uploads/projects/Heroes3.png" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\uploads\NeedForSpeed.png" afterPath="$PROJECT_DIR$/public/uploads/projects/NeedForSpeed.png" />
+      <change type="MOVED" beforePath="D:\work\iTechartGroup\nodejs\ra-projects\public\uploads\StarCraft.png" afterPath="$PROJECT_DIR$/public/uploads/projects/StarCraft.png" />
     </list>
     <ignored path="pmapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,139 +78,7 @@
     <favorites_list name="pmapp" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="312" column="9" selection-start="6355" selection-end="6355" vertical-scroll-proportion="-0.14802259" vertical-offset="4961" max-vertical-offset="9690">
-              <folding>
-                <element signature="e#57#95#0" expanded="false" />
-                <element signature="e#700#767#0" expanded="false" />
-                <element signature="e#895#914#0" expanded="false" />
-                <element signature="e#1021#1146#0" expanded="false" />
-                <element signature="e#1182#1237#0" expanded="false" />
-                <element signature="e#1275#1491#0" expanded="false" />
-                <element signature="e#1332#1486#0" expanded="false" />
-                <element signature="e#1345#1364#0" expanded="false" />
-                <element signature="e#1424#1450#0" expanded="false" />
-                <element signature="e#1456#1483#0" expanded="false" />
-                <element signature="e#1541#1624#0" expanded="false" />
-                <element signature="e#1554#1591#0" expanded="false" />
-                <element signature="e#1597#1622#0" expanded="false" />
-                <element signature="e#1676#1846#0" expanded="false" />
-                <element signature="e#1735#1842#0" expanded="false" />
-                <element signature="e#1748#1767#0" expanded="false" />
-                <element signature="e#1780#1806#0" expanded="false" />
-                <element signature="e#1812#1839#0" expanded="false" />
-                <element signature="n#!!block;n#CreateAccessToken#0" expanded="false" />
-                <element signature="e#1998#2236#0" expanded="false" />
-                <element signature="e#2012#2031#0" expanded="false" />
-                <element signature="e#2052#2091#0" expanded="false" />
-                <element signature="e#2097#2233#0" expanded="false" />
-                <element signature="e#2162#2228#0" expanded="false" />
-                <element signature="e#2177#2200#0" expanded="false" />
-                <element signature="n#!!block;n#RememberMe#0" expanded="false" />
-                <element signature="e#2305#2355#0" expanded="false" />
-                <element signature="e#2361#2403#0" expanded="false" />
-                <element signature="e#2533#3065#0" expanded="false" />
-                <element signature="e#2560#2644#0" expanded="false" />
-                <element signature="e#2690#3060#0" expanded="false" />
-                <element signature="e#2703#2790#0" expanded="false" />
-                <element signature="e#2804#2974#0" expanded="false" />
-                <element signature="e#2840#2968#0" expanded="false" />
-                <element signature="e#2855#2935#0" expanded="false" />
-                <element signature="e#2980#3056#0" expanded="false" />
-                <element signature="e#3152#3180#0" expanded="false" />
-                <element signature="e#3223#3261#0" expanded="false" />
-                <element signature="e#3304#3396#0" expanded="false" />
-                <element signature="e#3323#3368#0" expanded="false" />
-                <element signature="e#3501#3559#0" expanded="false" />
-                <element signature="e#3729#3753#0" expanded="false" />
-                <element signature="e#3806#3830#0" expanded="false" />
-                <element signature="e#5296#5637#0" expanded="false" />
-                <element signature="e#5358#5447#0" expanded="false" />
-                <element signature="e#5495#5632#0" expanded="false" />
-                <element signature="e#5508#5601#0" expanded="false" />
-                <element signature="e#5682#5855#0" expanded="false" />
-                <element signature="e#5728#5850#0" expanded="false" />
-                <element signature="e#5741#5813#0" expanded="false" />
-                <element signature="e#5904#6145#0" expanded="false" />
-                <element signature="e#6020#6140#0" expanded="false" />
-                <element signature="e#6033#6104#0" expanded="false" />
-                <element signature="e#7433#7657#0" expanded="false" />
-                <element signature="e#7498#7652#0" expanded="false" />
-                <element signature="e#7512#7604#0" expanded="false" />
-                <element signature="e#8620#8665#0" expanded="false" />
-                <element signature="e#8739#8782#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ticketNewController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/components/tickets/ticketNewController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="35" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/components/projects/project.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="43" selection-start="950" selection-end="965" vertical-scroll-proportion="-11.589744" vertical-offset="88" max-vertical-offset="1110">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="global.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/global.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="22" selection-start="1596" selection-end="1596" vertical-scroll-proportion="0.0" vertical-offset="2700" max-vertical-offset="4710">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ticketM.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/tickets/ticketM.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="54" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settingsM.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/settings/settingsM.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="20" selection-start="115" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/lodash/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3307" column="0" selection-start="111066" selection-end="111066" vertical-scroll-proportion="0.0" vertical-offset="98795" max-vertical-offset="364920">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="document.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/document.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1415" column="0" selection-start="35333" selection-end="35333" vertical-scroll-proportion="0.0" vertical-offset="42215" max-vertical-offset="63270">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -215,25 +93,28 @@
       <MyDateState />
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/public/app/components/projects/project.html" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/app/components/tickets/ticketEdit.html" />
-        <option value="$PROJECT_DIR$/public/app/components/tickets/ticketsService.js" />
-        <option value="$PROJECT_DIR$/public/app/components/tickets/ticketEditController.js" />
-        <option value="$PROJECT_DIR$/api/statuses/statusM.js" />
-        <option value="$PROJECT_DIR$/api/priorities/priorityM.js" />
-        <option value="$PROJECT_DIR$/public/app/app.js" />
-        <option value="$PROJECT_DIR$/public/app/components/projects/projectController.js" />
-        <option value="$PROJECT_DIR$/public/app/components/projects/projectEdit.html" />
         <option value="$PROJECT_DIR$/public/app/components/projects/projectNew.html" />
-        <option value="$PROJECT_DIR$/public/app/components/tickets/ticket.html" />
-        <option value="$PROJECT_DIR$/public/app/components/projects/project.html" />
-        <option value="$PROJECT_DIR$/public/css/global.css" />
-        <option value="$PROJECT_DIR$/public/app/components/tickets/ticketNewController.js" />
-        <option value="$PROJECT_DIR$/api/tickets/ticketM.js" />
-        <option value="$PROJECT_DIR$/api/settings/settingsM.js" />
+        <option value="$PROJECT_DIR$/public/app/components/projects/projectEdit.html" />
+        <option value="$PROJECT_DIR$/api/projects/projectM.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/public/app/privateTpl.html" />
+        <option value="$PROJECT_DIR$/public/app/publicTpl.html" />
+        <option value="$PROJECT_DIR$/public/app/components/projects/projects.html" />
+        <option value="$PROJECT_DIR$/api/users/userM.js" />
+        <option value="$PROJECT_DIR$/public/app/components/registration/registrationController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/registration/registration.html" />
+        <option value="$PROJECT_DIR$/public/app/components/projects/project.html" />
+        <option value="$PROJECT_DIR$/public/app/app.js" />
+        <option value="$PROJECT_DIR$/public/app/mainController.js" />
+        <option value="$PROJECT_DIR$/public/app/mainTpl.html" />
+        <option value="$PROJECT_DIR$/public/css/global.css" />
       </list>
     </option>
   </component>
@@ -279,154 +160,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pmapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ra-projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pmapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ra-projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pmapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ra-projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pmapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ra-projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pmapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ra-projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pmapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ra-projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tickets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pmapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ra-projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pmapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ra-projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -445,18 +178,18 @@
   <component name="PublishConfig" persistUploadOnCheckin="false" />
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\iTechartGroup\nodejs\ra-projects" />
+      <recent name="D:\work\iTechartGroup\nodejs\ra-projects\public\uploads\users" />
       <recent name="D:\work\iTechartGroup\nodejs\ra-projects\public\app\components\tickets" />
       <recent name="D:\work\iTechartGroup\nodejs\ra-projects\public\app\components\projects" />
       <recent name="D:\work\iTechartGroup\nodejs\ra-projects\api\settings" />
-      <recent name="D:\work\iTechartGroup\nodejs\ra-projects\public\uploads" />
-      <recent name="D:\work\iTechartGroup\nodejs\ra-projects\public\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\work\iTechartGroup\nodejs\ra-projects\public\uploads\projects" />
       <recent name="D:\work\iTechartGroup\nodejs\ra-projects\dont_review_old_code" />
       <recent name="D:\work\iTechartGroup\nodejs\ra-projects\public\3dParty" />
       <recent name="D:\WebServers\node\pmapp\public\app\components\info" />
       <recent name="D:\WebServers\node\pmapp\public\app\components\dashboard" />
-      <recent name="D:\WebServers\node\pmapp\public\app\components\users" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.app.js">
@@ -534,14 +267,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1932" height="1064" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49736008" sideWeight="0.59450895" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15730932" sideWeight="0.60190076" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20709746" sideWeight="0.60190076" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39809927" sideWeight="0.5976769" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3410771" sideWeight="0.40549102" order="9" side_tool="true" content_ui="tabs" />
@@ -603,163 +336,137 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/statuses/statusM.js">
+    <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/projects/projectM.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="47" selection-start="585" selection-end="585" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5130">
+        <state line="16" column="12" selection-start="457" selection-end="471" vertical-scroll-proportion="0.4520548" vertical-offset="84" max-vertical-offset="1860">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/projects/projectController.js">
+    <entry file="file://$PROJECT_DIR$/public/app/components/users/usersService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="32" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.704918" vertical-offset="645" max-vertical-offset="1560">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/projects/projectEditController.js">
+    <entry file="file://$PROJECT_DIR$/public/app/components/projects/projectNewController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/projects/projectEdit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="36" selection-start="1063" selection-end="1063" vertical-scroll-proportion="0.20857474" vertical-offset="360" max-vertical-offset="1350" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.1308204" vertical-offset="118" max-vertical-offset="1020">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/components/projects/projectNew.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="36" selection-start="950" selection-end="950" vertical-scroll-proportion="0.10660487" vertical-offset="448" max-vertical-offset="1350" />
+        <state line="11" column="0" selection-start="528" selection-end="715" vertical-scroll-proportion="0.382387" vertical-offset="0" max-vertical-offset="1560">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/projects/projects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="82" selection-start="228" selection-end="228" vertical-scroll-proportion="0.10428737" vertical-offset="0" max-vertical-offset="863">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/registration/registration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="51" selection-start="224" selection-end="224" vertical-scroll-proportion="0.2433372" vertical-offset="0" max-vertical-offset="1320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/registration/registrationController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="42" selection-start="334" selection-end="350" vertical-scroll-proportion="0.2660754" vertical-offset="0" max-vertical-offset="902">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/users/userM.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="9" selection-start="121" selection-end="126" vertical-scroll-proportion="0.19672132" vertical-offset="0" max-vertical-offset="915">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/components/tickets/ticket.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="317" selection-end="317" vertical-scroll-proportion="0.3128621" vertical-offset="0" max-vertical-offset="863">
+        <state line="13" column="4" selection-start="430" selection-end="430" vertical-scroll-proportion="0.45191193" vertical-offset="0" max-vertical-offset="863">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/document.js">
+    <entry file="file://$PROJECT_DIR$/public/app/mainController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1415" column="0" selection-start="35333" selection-end="35333" vertical-scroll-proportion="0.0" vertical-offset="42215" max-vertical-offset="63270">
+        <state line="8" column="37" selection-start="218" selection-end="218" vertical-scroll-proportion="0.23728813" vertical-offset="30" max-vertical-offset="990">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/lodash/index.js">
+    <entry file="file://$PROJECT_DIR$/public/uploads/projects/Heroes.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3307" column="0" selection-start="111066" selection-end="111066" vertical-scroll-proportion="0.0" vertical-offset="98795" max-vertical-offset="364920">
+        <state line="17" column="58" selection-start="572" selection-end="572" vertical-scroll-proportion="-1.2305987" vertical-offset="1620" max-vertical-offset="5160">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/db/ra-projects.ns">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="902">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/mainTpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="78" selection-start="2730" selection-end="2730" vertical-scroll-proportion="0.7478992" vertical-offset="967" max-vertical-offset="1800">
+          <folding>
+            <marker date="1432936326540" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1432936326540" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/global.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="22" selection-start="1596" selection-end="1596" vertical-scroll-proportion="0.0" vertical-offset="2700" max-vertical-offset="4710">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/tickets/ticketM.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="54" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/settings/settingsM.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="20" selection-start="115" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <folding />
+        <state line="44" column="14" selection-start="397" selection-end="397" vertical-scroll-proportion="0.45355192" vertical-offset="575" max-vertical-offset="4320">
+          <folding>
+            <element signature="e#11#29#0" expanded="false" />
+            <element signature="e#54#91#0" expanded="false" />
+            <element signature="e#98#136#0" expanded="false" />
+            <element signature="e#153#189#0" expanded="false" />
+            <element signature="e#685#720#0" expanded="false" />
+            <element signature="e#751#835#0" expanded="false" />
+            <element signature="e#864#906#0" expanded="false" />
+            <element signature="e#1161#1175#0" expanded="false" />
+            <element signature="e#1224#1279#0" expanded="false" />
+            <element signature="e#1350#1364#0" expanded="false" />
+            <element signature="e#1393#1457#0" expanded="false" />
+            <element signature="e#1758#1781#0" expanded="false" />
+            <element signature="e#2061#2089#0" expanded="false" />
+            <element signature="e#2108#2138#0" expanded="false" />
+            <element signature="e#2157#2182#0" expanded="false" />
+            <element signature="e#2198#2224#0" expanded="false" />
+            <element signature="e#2241#2264#0" expanded="false" />
+            <element signature="e#2280#2297#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/components/projects/project.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="43" selection-start="950" selection-end="965" vertical-scroll-proportion="-11.589744" vertical-offset="88" max-vertical-offset="1110">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/tickets/ticketNewController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="35" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="312" column="9" selection-start="6355" selection-end="6355" vertical-scroll-proportion="-0.14802259" vertical-offset="4961" max-vertical-offset="9690">
+        <state line="30" column="22" selection-start="995" selection-end="995" vertical-scroll-proportion="1.0428737" vertical-offset="0" max-vertical-offset="1470">
           <folding>
-            <element signature="e#57#95#0" expanded="false" />
-            <element signature="e#700#767#0" expanded="false" />
-            <element signature="e#895#914#0" expanded="false" />
-            <element signature="e#1021#1146#0" expanded="false" />
-            <element signature="e#1182#1237#0" expanded="false" />
-            <element signature="e#1275#1491#0" expanded="false" />
-            <element signature="e#1332#1486#0" expanded="false" />
-            <element signature="e#1345#1364#0" expanded="false" />
-            <element signature="e#1424#1450#0" expanded="false" />
-            <element signature="e#1456#1483#0" expanded="false" />
-            <element signature="e#1541#1624#0" expanded="false" />
-            <element signature="e#1554#1591#0" expanded="false" />
-            <element signature="e#1597#1622#0" expanded="false" />
-            <element signature="e#1676#1846#0" expanded="false" />
-            <element signature="e#1735#1842#0" expanded="false" />
-            <element signature="e#1748#1767#0" expanded="false" />
-            <element signature="e#1780#1806#0" expanded="false" />
-            <element signature="e#1812#1839#0" expanded="false" />
-            <element signature="n#!!block;n#CreateAccessToken#0" expanded="false" />
-            <element signature="e#1998#2236#0" expanded="false" />
-            <element signature="e#2012#2031#0" expanded="false" />
-            <element signature="e#2052#2091#0" expanded="false" />
-            <element signature="e#2097#2233#0" expanded="false" />
-            <element signature="e#2162#2228#0" expanded="false" />
-            <element signature="e#2177#2200#0" expanded="false" />
-            <element signature="n#!!block;n#RememberMe#0" expanded="false" />
-            <element signature="e#2305#2355#0" expanded="false" />
-            <element signature="e#2361#2403#0" expanded="false" />
-            <element signature="e#2533#3065#0" expanded="false" />
-            <element signature="e#2560#2644#0" expanded="false" />
-            <element signature="e#2690#3060#0" expanded="false" />
-            <element signature="e#2703#2790#0" expanded="false" />
-            <element signature="e#2804#2974#0" expanded="false" />
-            <element signature="e#2840#2968#0" expanded="false" />
-            <element signature="e#2855#2935#0" expanded="false" />
-            <element signature="e#2980#3056#0" expanded="false" />
-            <element signature="e#3152#3180#0" expanded="false" />
-            <element signature="e#3223#3261#0" expanded="false" />
-            <element signature="e#3304#3396#0" expanded="false" />
-            <element signature="e#3323#3368#0" expanded="false" />
-            <element signature="e#3501#3559#0" expanded="false" />
-            <element signature="e#3729#3753#0" expanded="false" />
-            <element signature="e#3806#3830#0" expanded="false" />
-            <element signature="e#5296#5637#0" expanded="false" />
-            <element signature="e#5358#5447#0" expanded="false" />
-            <element signature="e#5495#5632#0" expanded="false" />
-            <element signature="e#5508#5601#0" expanded="false" />
-            <element signature="e#5682#5855#0" expanded="false" />
-            <element signature="e#5728#5850#0" expanded="false" />
-            <element signature="e#5741#5813#0" expanded="false" />
-            <element signature="e#5904#6145#0" expanded="false" />
-            <element signature="e#6020#6140#0" expanded="false" />
-            <element signature="e#6033#6104#0" expanded="false" />
-            <element signature="e#7433#7657#0" expanded="false" />
-            <element signature="e#7498#7652#0" expanded="false" />
-            <element signature="e#7512#7604#0" expanded="false" />
-            <element signature="e#8620#8665#0" expanded="false" />
-            <element signature="e#8739#8782#0" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

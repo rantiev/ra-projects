@@ -1,5 +1,4 @@
 var myApp = angular.module('ra-projects', ['ui.router', 'ui.layout', 'toaster', 'ang-drag-drop'])
-
 	.run(['$rootScope', '$state', '$timeout', '$http',
 		function ($rootScope, $state, $timeout, $http) {
 
@@ -14,7 +13,9 @@ var myApp = angular.module('ra-projects', ['ui.router', 'ui.layout', 'toaster', 
 						$rootScope.userCan = 1;
 						if (toState.public) {
 							$state.go('main.private.projects');
+							return;
 						}
+						$rootScope.currentState = toState;
 					},
 					function error(reason) {
 						$rootScope.userCan = 0;

@@ -5,6 +5,7 @@ myApp.controller('projectNewController', ['toaster', 'projectsService', 'setting
 	$scope.project = {
 		name: '',
 		description: '',
+		image: '',
 		statuses: settings.data.statuses,
 		priorities: settings.data.priorities
 	};

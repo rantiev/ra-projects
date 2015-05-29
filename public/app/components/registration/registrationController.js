@@ -6,6 +6,7 @@ myApp.controller('registrationController', ['toaster', 'usersService', '$state',
 			email: $scope.raFormInputEmail,
 			fname: $scope.raFormInputFirstName,
 			lname: $scope.raFormInputLastName,
+			image: $scope.raFormInputImage,
 			password: $scope.raFormInputPassword,
 			remember: $scope.raFormInputRememberMe
 		}).then(

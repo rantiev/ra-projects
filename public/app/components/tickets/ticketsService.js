@@ -1,6 +1,6 @@
-myApp.service('ticketsService', ['$http', function($http){
+myApp.service('ticketsService', ['$http', function ($http) {
 
-	this.create = function(ticket){
+	this.create = function (ticket) {
 
 		return $http.post('/ticket', ticket)
 			.success(function (data, status, headers, config) {
@@ -8,11 +8,12 @@ myApp.service('ticketsService', ['$http', function($http){
 			})
 			.error(function (data, status, headers, config) {
 				console.log('error: ticket wasn\'t created!');
-			});;
+			});
+		;
 
 	}
 
-	this.update = function(ticket){
+	this.update = function (ticket) {
 
 		return $http.put('/ticket/' + ticket._id, ticket)
 			.success(function (data, status, headers, config) {
@@ -20,11 +21,12 @@ myApp.service('ticketsService', ['$http', function($http){
 			})
 			.error(function (data, status, headers, config) {
 				console.log('error: ticket wasn\'t updated!');
-			});;
+			});
+		;
 
 	}
 
-	this.delete = function(ticket){
+	this.delete = function (ticket) {
 
 		return $http.delete('/ticket/' + ticket._id)
 			.success(function (data, status, headers, config) {
@@ -32,11 +34,12 @@ myApp.service('ticketsService', ['$http', function($http){
 			})
 			.error(function (data, status, headers, config) {
 				console.log('error: ticket wasn\'t deleted!');
-			});;
+			});
+		;
 
 	}
 
-	this.getAll = function(){
+	this.getAll = function () {
 
 		return $http.get('/tickets')
 			.success(function (data, status, headers, config) {
@@ -44,11 +47,12 @@ myApp.service('ticketsService', ['$http', function($http){
 			})
 			.error(function (data, status, headers, config) {
 				console.log('error: tickets weren\'t obtained!');
-			});;
+			});
+		;
 
 	}
 
-	this.getOne = function(id){
+	this.getOne = function (id) {
 
 		return $http.get('/ticket/' + id)
 			.success(function (data, status, headers, config) {
@@ -56,7 +60,8 @@ myApp.service('ticketsService', ['$http', function($http){
 			})
 			.error(function (data, status, headers, config) {
 				console.log('error: ticket weren\'t obtained!');
-			});;
+			});
+		;
 
 	}
 

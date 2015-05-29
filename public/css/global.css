@@ -35,9 +35,14 @@ ul {
 	z-index: 999;
 }
 
+.ra-full-height {
+	height:100%;
+}
+
 .ra-projects-list {
 	list-style: none;
 	margin: 0 -10px;
+	padding:0;
 }
 
 .ra-projects-list-item {
@@ -69,10 +74,21 @@ ul {
 	max-height: 100px;
 }
 
-.ra-tickets-row {
+.ra-tickets-grid {
 	display: table;
 	width:100%;
+	height:100%;
+	border-collapse:collapse;
+}
+
+.ra-tickets-row {
+	display: table-row;
+	width:100%;
 	border-bottom:2px solid #eee;
+}
+
+.ra-tickets-row:first-child {
+	height:50px;
 }
 
 .ra-tickets-row:last-child {
@@ -101,9 +117,8 @@ ul {
 }
 
 .ra-project-ticket {
-	display: inline-block;
-	max-width: 320px;
-	margin: 2px;
+	display: block;
+	margin: 4px;
 	padding: 10px;
 	border: 1px solid lightblue;
 	border-left-width:4px;
@@ -111,10 +126,29 @@ ul {
 	position: relative;
 	cursor: pointer;
 	transition:background .3s ease-in-out;
+	overflow:hidden;
 }
 
 .ra-ticket-label {
 	font-weight: bold;
+}
+
+.ra-ticket-asignee {
+	width:50px;
+	float:right;
+}
+
+.ra-ticket-asignee img{
+	max-width:100%;
+	height:auto;
+}
+
+.ra-drop-entered {
+	background:lightyellow;
+}
+
+.ra-drop-active {
+	background:lightgoldenrodyellow;
 }
 
 .ra-ticket-green {
@@ -140,13 +174,12 @@ ul {
 	float:right;
 }
 
-.ps-view {
-	height: 100%;
-	padding: 0 15px;
-	box-sizing: border-box;
-	position: relative;
+.navbar-btn .btn {
+	margin-left:20px;
 }
 
-.ps-panel {
+.ra-container {
 	padding: 15px;
+	box-sizing: border-box;
+	position: relative;
 }

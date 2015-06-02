@@ -1,4 +1,4 @@
-myApp.controller('projectController', ['toaster', '$state', '$scope', 'ticketsService', 'project', 'tickets', 'users', function (toaster, $state, $scope, ticketsService, project, tickets, users) {
+myApp.controller('projectController', ['toaster', '$state', '$rootScope', '$scope', 'ticketsService', 'project', 'tickets', 'users', function (toaster, $state, $rootScope, $scope, ticketsService, project, tickets, users) {
 
 	$scope.project = project.data;
 	$scope.tickets = tickets.data;
@@ -25,5 +25,7 @@ myApp.controller('projectController', ['toaster', '$state', '$scope', 'ticketsSe
 		}
 
 	}
+
+/*	$rootScope.currentProject = $scope.project;*/
 
 }]);

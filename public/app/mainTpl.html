@@ -21,6 +21,9 @@
 							</a>
 						</p>
 					</li>
+<!--					<li ui-sref-active="active" ng-if="currentState.name == 'main.private.project'">
+						<a ui-sref="main.private.project(id: currentProject._id)">{{ currentProject.name }}</a>
+					</li>-->
 					<li ng-if="currentState.name == 'main.private.project'">
 						<p class="navbar-btn">
 							<a class="btn btn-default" data-ui-sref="main.private.ticket-new({projectID: project._id})">
@@ -35,6 +38,13 @@
 
 				<div class="navbar-right">
 					<ul class="nav navbar-nav">
+						<li ng-if="currentState.name == 'main.private.project'">
+							<p class="navbar-btn">
+								<a class="btn btn-default" data-ui-sref="main.private.project-edit({id: project._id})">
+									<i class="glyphicon glyphicon-pencil"></i>
+								</a>
+							</p>
+						</li>
 						<li ng-if="userCan"><a href="/logout">Logout</a></li>
 						<li ng-if="!userCan && currentState.name !== 'main.public.registration'"><a ui-sref="main.public.registration">Registration</a></li>
 						<li ng-if="!userCan && currentState.name !== 'main.public.login'"><a ui-sref="main.public.login">Login</a></li>

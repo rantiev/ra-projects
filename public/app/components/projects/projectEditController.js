@@ -16,6 +16,7 @@ myApp.controller('projectEditController', ['toaster', 'projectsService', 'projec
 		var project = projectsService.update($scope.project);
 		project.then(function () {
 			$state.go('main.private.projects');
+			toaster.pop("success", "", "Project has been updated", 2000);
 		});
 	}
 
@@ -25,6 +26,7 @@ myApp.controller('projectEditController', ['toaster', 'projectsService', 'projec
 			var promise = projectsService.delete($scope.project);
 			promise.then(function () {
 				$state.go('main.private.projects');
+				toaster.pop("success", "", "Project has been removed", 2000);
 			});
 		};
 

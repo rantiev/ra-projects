@@ -4,7 +4,7 @@
 		<div class="col-sm-2 col-sm-offset-5">
 			<form>
 				<div class="form-group">
-					<select class="form-control" data-ng-model="raFormInputImage">
+					<select class="form-control" data-ng-model="raFormInputImage" required>
 						<option selected="selected">Please Select an Image</option>
 						<option
 								ng-repeat="image in raSettings.userImages"
@@ -12,19 +12,19 @@
 					</select>
 				</div>
 				<div class="form-group">
-					<input type="email" class="form-control" name="raFormInputEmail" id="raFormInputEmail" placeholder="Email" data-ng-model="raFormInputEmail">
+					<input type="email" class="form-control" name="raFormInputEmail" id="raFormInputEmail" placeholder="Email" data-ng-model="raFormInputEmail" required>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control" name="raFormInputFirstName" id="raFormInputFirstName" placeholder="First Name" data-ng-model="raFormInputFirstName">
+					<input type="text" class="form-control" name="raFormInputFirstName" id="raFormInputFirstName" placeholder="First Name" data-ng-model="raFormInputFirstName" required minlength="2" maxlength="50">
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control" name="raFormInputLastName" id="raFormInputLastName" placeholder="Last Name" data-ng-model="raFormInputLastName">
+					<input type="text" class="form-control" name="raFormInputLastName" id="raFormInputLastName" placeholder="Last Name" data-ng-model="raFormInputLastName" required minlength="2" maxlength="50">
 				</div>
 				<div class="form-group">
-					<input type="password" class="form-control" name="raFormInputPassword" id="raFormInputPassword" placeholder="Password" data-ng-model="raFormInputPassword">
+					<input type="password" class="form-control" name="raFormInputPassword" id="raFormInputPassword" placeholder="Password" data-ng-model="raFormInputPassword" required minlength="6" maxlength="50">
 				</div>
 				<div class="form-group">
-					<input type="password" class="form-control" name="raFormInputPasswordConfirm" id="raFormInputPasswordConfirm" placeholder="Confirm Password" data-ng-model="raFormInputPasswordConfirm">
+					<input type="password" class="form-control" name="raFormInputPasswordConfirm" id="raFormInputPasswordConfirm" placeholder="Confirm Password" data-ng-model="raFormInputPasswordConfirm" required minlength="6" maxlength="50">
 				</div>
 				<div class="checkbox">
 					<label>

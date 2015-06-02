@@ -1,7 +1,7 @@
 <ul class="ra-projects-list">
 	<li  class="ra-projects-list-item" ng-repeat="project in projects">
 		<a ui-sref="main.private.project({id: project._id})">
-			<span class="ra-projects-list-item-image"><img src="/uploads/projects/{{project.image}}" alt="{{project.name}}"/></span>
+			<span class="ra-projects-list-item-image"><img src="#" data-ng-src="/uploads/projects/{{project.image}}" alt="{{project.name}}"/></span>
 		</a>
 	</li>
 </ul>

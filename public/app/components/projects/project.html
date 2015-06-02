@@ -20,14 +20,14 @@
 			<div
 				class="ra-project-ticket ra-ticket-{{ticket.color}}"
 
-				data-ui-sref="main.private.ticket({id:ticket._id, projectID:project._id})"
+				data-ui-sref="main.private.ticket({id: ticket._id, projectID: project._id})"
 
 				ui-draggable="true"
 				drag="ticket"
 
 				data-ng-repeat="ticket in tickets | filter: {status: status._id}">
 				<div class="ra-ticket-asignee">
-					<img src="uploads/users/{{users[ticket.user].image}}" alt="{{users[ticket.user].fname}} {{users[ticket.user].lname}}"/>
+					<img src="#" data-ng-src="uploads/users/{{users[ticket.user].image}}" alt="{{users[ticket.user].fname}} {{users[ticket.user].lname}}"/>
 				</div>
 				<div class="ra-ticket-label">{{ticket.label}}</div>
 				<div class="ra-ticket-name">{{ticket.name}}</div>

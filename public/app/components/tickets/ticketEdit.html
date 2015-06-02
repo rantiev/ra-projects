@@ -1,25 +1,25 @@
-<h3>Edit Ticket</h3>
+<h3>Edit Ticket <a href="#" class="ra-title-btn" data-ng-click="removeTicket()"><i class="glyphicon glyphicon-remove"></i></a></h3>
 <form ng-show="!inProgress">
 	<div class="row">
 		<div class="col-sm-4">
 			<div class="form-group">
-				<input type="text" class="form-control" name="raFormInputTicketName" id="raFormInputTicketName" placeholder="Name" data-ng-model="ticket.name">
+				<input type="text" class="form-control" name="raFormInputTicketName" id="raFormInputTicketName" placeholder="Name" data-ng-model="ticket.name" required minlength="2" maxlength="150">
 			</div>
 			<div class="form-group">
 				<textarea class="form-control" name="raFormInputTicketDescription" id="raFormInputTicketDescription" placeholder="Description" data-ng-model="ticket.description"></textarea>
 			</div>
 			<div class="form-group">
-				<select class="form-control" data-ng-model="ticket.user">
+				<select class="form-control" data-ng-model="ticket.user" required>
 					<option data-ng-repeat="user in users" value="{{user._id}}">{{user.fname}} {{user.lname}}</option>
 				</select>
 			</div>
 			<div class="form-group">
-				<select class="form-control" data-ng-model="ticket.status">
+				<select class="form-control" data-ng-model="ticket.status" required>
 					<option data-ng-repeat="status in project.statuses" value="{{status._id}}" data-ng-selected="status._id == ticket.status">{{status.name}}</option>
 				</select>
 			</div>
 			<div class="form-group">
-				<select class="form-control" data-ng-model="ticket.priority">
+				<select class="form-control" data-ng-model="ticket.priority" required>
 					<option data-ng-repeat="priority in project.priorities" value="{{priority._id}}" data-ng-selected="priority._id == ticket.priority">{{priority.name}}</option>
 				</select>
 			</div>

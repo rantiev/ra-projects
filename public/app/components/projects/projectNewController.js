@@ -23,6 +23,7 @@ myApp.controller('projectNewController', ['toaster', 'projectsService', 'setting
 		var project = projectsService.create($scope.project);
 		project.then(function(){
 			$state.go('main.private.projects');
+			toaster.pop("success", "", "Project has been created", 2000);
 		});
 	}
 

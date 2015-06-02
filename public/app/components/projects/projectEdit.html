@@ -3,13 +3,13 @@
 	<div class="col-sm-4">
 		<form data-ng-show="!inProgress">
 			<div class="form-group">
-				<input type="text" class="form-control" name="raFormInputProjectName" id="raFormInputProjectName" placeholder="Name" data-ng-model="project.name">
+				<input type="text" class="form-control" name="raFormInputProjectName" id="raFormInputProjectName" placeholder="Name" data-ng-model="project.name" required minlength="2" maxlength="50">
 			</div>
 			<div class="form-group">
 				<textarea class="form-control" name="raFormInputProjectDescription" id="raFormInputProjectName" placeholder="Description" data-ng-model="project.description"></textarea>
 			</div>
 			<div class="form-group">
-				<select class="form-control" data-ng-model="project.image">
+				<select class="form-control" data-ng-model="project.image" required>
 					<option
 							ng-repeat="image in raSettings.projectImages"
 							data-ng-selected="image == project.image"
@@ -20,7 +20,7 @@
 				<div class="col-sm-6 form-group">
 					<h4>Ticket Statuses</h4>
 					<ul class="list-unstyled">
-						<li class="form-group" ng-repeat="status in project.statuses"><input type="text" class="form-control" name="raFormInputProjectStatus" data-ng-model="status.name"></li>
+						<li class="form-group" ng-repeat="status in project.statuses"><input type="text" class="form-control" name="raFormInputProjectStatus" data-ng-model="status.name" required minlength="2" maxlength="50"></li>
 						<li><button type="submit" data-ng-click="addStatus()" class="btn btn-default">Add Status</button></li>
 					</ul>
 				</div>
@@ -28,8 +28,8 @@
 					<h4>Ticket Priorities</h4>
 					<ul class="list-unstyled">
 						<li class="form-group" data-ng-repeat="priority in project.priorities">
-							<input type="text" class="form-control" name="raFormInputProjectStatus" data-ng-model="priority.name">
-							<select class="form-control" data-ng-model="priority.color">
+							<input type="text" class="form-control" name="raFormInputProjectStatus" data-ng-model="priority.name" required minlength="2" maxlength="50">
+							<select class="form-control" data-ng-model="priority.color" required>
 								<option value="red" data-ng-selected="priority.color == 'red'">red</option>
 								<option value="orange" data-ng-selected="priority.color == 'orange'">orange</option>
 								<option value="yellow" data-ng-selected="priority.color == 'yellow'">yellow</option>

@@ -1,4 +1,4 @@
-var myApp = angular.module('ra-projects', ['ui.router', 'ui.layout', 'toaster', 'ang-drag-drop'])
+var myApp = angular.module('ra-projects', ['ui.router', 'ui.layout', 'toaster', 'dndLists'])
 	.run(['$rootScope', '$state', '$timeout', '$http',
 		function ($rootScope, $state, $timeout, $http) {
 
@@ -93,9 +93,6 @@ var myApp = angular.module('ra-projects', ['ui.router', 'ui.layout', 'toaster', 
 					},
 					tickets: function ($stateParams, ticketsService) {
 						return ticketsService.getAll($stateParams.id);
-					},
-					users: function ($stateParams, usersService) {
-						return usersService.getAll();
 					}
 				}
 			})
@@ -110,12 +107,15 @@ var myApp = angular.module('ra-projects', ['ui.router', 'ui.layout', 'toaster', 
 				}
 			})
 			.state('main.private.ticket-new', {
-				url: '/ticket-new/:projectID',
+				url: '/ticket-new',
 				templateUrl: 'app/components/tickets/ticketNew.html',
 				controller: 'ticketNewController',
+				params: {
+					pid: null,
+				},
 				resolve: {
 					project: function ($stateParams, projectsService) {
-						return projectsService.getOne($stateParams.projectID);
+						return projectsService.getOne($stateParams.pid);
 					},
 					users: function($stateParams, usersService){
 						return usersService.getAll();
@@ -127,14 +127,8 @@ var myApp = angular.module('ra-projects', ['ui.router', 'ui.layout', 'toaster', 
 				templateUrl: 'app/components/tickets/ticket.html',
 				controller: 'ticketController',
 				resolve: {
-					project: function ($stateParams, projectsService) {
-						return projectsService.getOne($stateParams.projectID);
-					},
 					ticket: function ($stateParams, ticketsService) {
 						return ticketsService.getOne($stateParams.id);
-					},
-					users: function($stateParams, usersService){
-						return usersService.getAll();
 					}
 				}
 			})
@@ -143,9 +137,7 @@ var myApp = angular.module('ra-projects', ['ui.router', 'ui.layout', 'toaster', 
 				templateUrl: 'app/components/tickets/ticketEdit.html',
 				controller: 'ticketEditController',
 				resolve: {
-					project: function ($stateParams, projectsService) {
-						return projectsService.getOne($stateParams.projectID);
-					},
+
 					ticket: function ($stateParams, ticketsService) {
 						return ticketsService.getOne($stateParams.id);
 					},

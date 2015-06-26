@@ -6,6 +6,8 @@ myApp.controller('ticketNewController', ['toaster', 'ticketsService', 'project',
 
 	$scope.project = project.data;
 
+	console.log(project.data);
+
 	$scope.ticket = {
 		name: '',
 		description: '',
@@ -17,6 +19,8 @@ myApp.controller('ticketNewController', ['toaster', 'ticketsService', 'project',
 	};
 
 	$scope.submitForm = function(){
+
+		console.log($scope.project, $scope.ticket);
 
 		var ticket = ticketsService.create($scope.ticket);
 		ticket.then(function(){

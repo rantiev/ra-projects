@@ -1,12 +1,7 @@
-myApp.controller('projectController', ['toaster', '$state', '$rootScope', '$scope', 'ticketsService', 'project', 'tickets', 'users', function (toaster, $state, $rootScope, $scope, ticketsService, project, tickets, users) {
+myApp.controller('projectController', ['toaster', '$state', '$rootScope', '$scope', 'ticketsService', 'project', 'tickets' , function (toaster, $state, $rootScope, $scope, ticketsService, project, tickets) {
 
 	$scope.project = project.data;
 	$scope.tickets = tickets.data;
-	$scope.users = [];
-
-	users.data.forEach(function (user) {
-		$scope.users[user._id] = user;
-	});
 
 	$scope.tickets.forEach(function (ticket) {
 		var priority = _.find($scope.project.priorities, {_id: ticket.priority});
@@ -19,13 +14,18 @@ myApp.controller('projectController', ['toaster', '$state', '$rootScope', '$scop
 
 		var originalTicket = _.find($scope.tickets, {_id: ticket._id});
 
-		if(originalTicket){
+		if (originalTicket) {
 			originalTicket.status = statusID;
 			ticketsService.update(originalTicket);
 		}
 
 	}
 
-/*	$rootScope.currentProject = $scope.project;*/
+	$scope.dropCallback = function (event, index, item, external, type, allowedType) {
+		$scope.logListEvent('dropped at', event, index, external, type);
+		return item;
+	};
+
+	$rootScope.currentProject = $scope.project;
 
 }]);

@@ -1,4 +1,4 @@
-<h1>{{ticket.name}} <a class="ra-title-btn" data-ui-sref="main.private.ticket-edit({id: ticket._id, projectID:project._id})"><i class="glyphicon glyphicon-edit"></i></a></h1>
+<h1>{{ticket.name}} <a class="ra-title-btn" data-ui-sref="main.private.ticket-edit({id: ticket._id, projectID: ticket.project})"><i class="glyphicon glyphicon-edit"></i></a></h1>
 <p>
 	<strong>Description:</strong><br />
 	{{ticket.description}}
@@ -10,5 +10,5 @@
 	<strong>Priority:</strong> {{ticket.priority.name}}
 </p>
 <p>
-	<strong>Asignee:</strong> {{user.fname}} {{user.lname}}
+	<strong>Asignee:</strong> {{ticket.user.fname}} {{ticket.user.lname}}
 </p>

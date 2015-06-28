@@ -133,11 +133,10 @@ var myApp = angular.module('ra-projects', ['ui.router', 'ui.layout', 'toaster', 
 				}
 			})
 			.state('main.private.ticket-edit', {
-				url: '/ticket/:id&:projectID/edit',
+				url: '/ticket/:id/edit',
 				templateUrl: 'app/components/tickets/ticketEdit.html',
 				controller: 'ticketEditController',
 				resolve: {
-
 					ticket: function ($stateParams, ticketsService) {
 						return ticketsService.getOne($stateParams.id);
 					},

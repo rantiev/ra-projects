@@ -11,7 +11,7 @@ myApp.service('usersService', function ($http) {
 	}
 
 	this.register = function (data) {
-		return $http.post('/register', data)
+		return $http.post('/user', data)
 			.success(function (data, status, headers, config) {
 				console.log('User created');
 			})

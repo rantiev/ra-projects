@@ -1,10 +1,8 @@
-myApp.controller('ticketEditController', ['toaster', 'ticketsService', 'ticket', 'project', 'users', '$state', '$scope', function (toaster, ticketsService, ticket, project, users, $state, $scope) {
+myApp.controller('ticketEditController', ['toaster', 'ticketsService', 'ticket', 'users', '$state', '$scope', function (toaster, ticketsService, ticket, users, $state, $scope) {
 
 	$scope.inProgress = 0;
 
 	$scope.users = users.data;
-
-	$scope.project = project.data;
 
 	$scope.ticket = ticket.data;
 
@@ -13,7 +11,7 @@ myApp.controller('ticketEditController', ['toaster', 'ticketsService', 'ticket',
 		var ticket = ticketsService.update($scope.ticket);
 
 		ticket.then(function () {
-			$state.go('main.private.project', {id: $scope.ticket.project });
+			$state.go('main.private.project', {id: $scope.ticket.project._id });
 			toaster.pop("success", "", "Ticket has been updated", 2000);
 		});
 	}
@@ -23,7 +21,7 @@ myApp.controller('ticketEditController', ['toaster', 'ticketsService', 'ticket',
 		if(confirm("Do you really want to remove the ticket?")){
 			var promise = ticketsService.delete($scope.ticket);
 			promise.then(function () {
-				$state.go('main.private.project', {id: $scope.ticket.project });
+				$state.go('main.private.project', {id: $scope.ticket.project._id });
 				toaster.pop("success", "", "Ticket has been removed", 2000);
 			});
 		};

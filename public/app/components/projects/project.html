@@ -11,26 +11,19 @@
 		<ul class="ra-tickets-column"
 			 style="width:{{100/project.statuses.length}}%"
 
-			 dnd-list
+			 data-ng-repeat="list in lists"
 
-			 ui-on-Drop="changeTicketStatus($data, status._id)"
-			 drag-enter-class="ra-drop-entered"
-			 drag-hover-class="ra-drop-active"
-
-			 data-ng-repeat="status in project.statuses">
+			 dnd-list="list">
 
 			<li
 				class="ra-project-ticket ra-ticket-{{ticket.color}}"
 
 				dnd-draggable="ticket"
-				dnd-drop="dropCallback(event, index, item, external, type, 'itemType')"
+				dnd-moved="list.splice($index, 1)"
 
 				data-ui-sref="main.private.ticket({id: ticket._id, projectID: project._id})"
 
-				ui-draggable="true"
-				drag="ticket"
-
-				data-ng-repeat="ticket in tickets | filter: {status: status._id}">
+				data-ng-repeat="ticket in list">
 				<div class="ra-ticket-asignee">
 					<img src="#" data-ng-src="uploads/users/{{ticket.user.image}}" alt="{{ticket.user.fname}} {{ticket.user.lname}}"/>
 				</div>

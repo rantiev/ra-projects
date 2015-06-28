@@ -183,3 +183,8 @@ ul {
 	box-sizing: border-box;
 	position: relative;
 }
+
+ul[dnd-list],
+ul[dnd-list] > li {
+	position: relative;
+}

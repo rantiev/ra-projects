@@ -3,10 +3,20 @@ myApp.controller('projectController', ['toaster', '$state', '$rootScope', '$scop
 	$scope.project = project.data;
 	$scope.tickets = tickets.data;
 
+	$scope.lists = {};
+
+	$scope.project.statuses.forEach(function (status) {
+		$scope.lists[status._id] = [];
+	});
+
 	$scope.tickets.forEach(function (ticket) {
 		var priority = _.find($scope.project.priorities, {_id: ticket.priority});
 		if (priority) {
 			ticket.color = _.find($scope.project.priorities, {_id: ticket.priority}).color;
+		}
+
+		if($scope.lists[ticket.status]) {
+			$scope.lists[ticket.status].push(ticket);
 		}
 	});
 

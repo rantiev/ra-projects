@@ -10,17 +10,17 @@
 			</div>
 			<div class="form-group">
 				<select class="form-control" data-ng-model="ticket.user" required>
-					<option data-ng-repeat="user in users" value="{{user._id}}">{{user.fname}} {{user.lname}}</option>
+					<option data-ng-repeat="user in users" value="{{user._id}}" data-ng-selected="user._id == ticket.user._id">{{user.fname}} {{user.lname}}</option>
 				</select>
 			</div>
 			<div class="form-group">
 				<select class="form-control" data-ng-model="ticket.status" required>
-					<option data-ng-repeat="status in project.statuses" value="{{status._id}}" data-ng-selected="status._id == ticket.status">{{status.name}}</option>
+					<option data-ng-repeat="status in ticket.project.statuses" value="{{status._id}}" data-ng-selected="status._id == ticket.status">{{status.name}}</option>
 				</select>
 			</div>
 			<div class="form-group">
 				<select class="form-control" data-ng-model="ticket.priority" required>
-					<option data-ng-repeat="priority in project.priorities" value="{{priority._id}}" data-ng-selected="priority._id == ticket.priority">{{priority.name}}</option>
+					<option data-ng-repeat="priority in ticket.project.priorities" value="{{priority._id}}" data-ng-selected="priority._id == ticket.priority">{{priority.name}}</option>
 				</select>
 			</div>
 		</div>

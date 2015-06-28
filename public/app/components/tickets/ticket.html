@@ -1,4 +1,5 @@
-<h1>{{ticket.name}} <a class="ra-title-btn" data-ui-sref="main.private.ticket-edit({id: ticket._id, projectID: ticket.project})"><i class="glyphicon glyphicon-edit"></i></a></h1>
+<h1>{{ticket.name}} <a class="ra-title-btn" data-ui-sref="main.private.ticket-edit({id: ticket._id, pid: currentProject._id})"><i class="glyphicon glyphicon-edit"></i></a></h1>
+<p>{{ticket.label}}</p>
 <p>
 	<strong>Description:</strong><br />
 	{{ticket.description}}

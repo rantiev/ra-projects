@@ -8,13 +8,13 @@
 		</div>
 	</div>
 	<div class="ra-tickets-row">
+
 		<ul class="ra-tickets-column"
 			 style="width:{{100/project.statuses.length}}%"
 
 			 data-ng-repeat="list in lists"
-
+			 dnd-drop="changeTicketStatus(item, $index)"
 			 dnd-list="list">
-
 			<li
 				class="ra-project-ticket ra-ticket-{{ticket.color}}"
 

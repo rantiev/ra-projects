@@ -188,3 +188,31 @@ ul[dnd-list],
 ul[dnd-list] > li {
 	position: relative;
 }
+
+.ra-reordering-list li:not(:last-child) {
+	padding:0 30px;
+}
+
+.ra-reordering-list li:not(:last-child) span,
+.ra-reordering-list li:not(:last-child):before {
+	position: absolute;
+	top:8px;
+	display: block;
+	color: dimgray;
+	font-family:'Glyphicons Halflings';
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.ra-reordering-list li:not(:last-child):before {
+	left:5px;
+	content: "\e150";
+}
+
+.ra-reordering-list li:not(:last-child) span {
+	right:10px;
+}
+
+.ra-reordering-list li:not(:last-child) span:before {
+	content: "\e014";
+}

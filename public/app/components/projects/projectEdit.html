@@ -19,15 +19,26 @@
 			<div class="row">
 				<div class="col-sm-6 form-group">
 					<h4>Ticket Statuses</h4>
-					<ul class="list-unstyled">
-						<li class="form-group" ng-repeat="status in project.statuses"><input type="text" class="form-control" name="raFormInputProjectStatus" data-ng-model="status.name" required minlength="2" maxlength="50"></li>
+					<ul class="list-unstyled ra-reordering-list"
+						dnd-list="project.statuses"
+						dnd-drop="changeItemOrder(index, item)">
+						<li class="form-group" ng-repeat="status in project.statuses | orderBy: 'order'"
+							dnd-draggable="status"
+							dnd-moved="project.statuses.splice($index, 1);">
+							<input type="text" class="form-control" name="raFormInputProjectStatus" data-ng-model="status.name" required minlength="2" maxlength="50">
+							<span ng-click="removeStatus(status)"></span>
+						</li>
 						<li><button type="submit" data-ng-click="addStatus()" class="btn btn-default">Add Status</button></li>
 					</ul>
 				</div>
 				<div class="col-sm-6 form-group">
 					<h4>Ticket Priorities</h4>
-					<ul class="list-unstyled">
-						<li class="form-group" data-ng-repeat="priority in project.priorities">
+					<ul class="list-unstyled ra-reordering-list"
+							dnd-list="project.priorities"
+							dnd-drop="changeItemOrder(index, item)">
+						<li class="form-group" data-ng-repeat="priority in project.priorities | orderBy: 'order'"
+							dnd-draggable="priority"
+							dnd-moved="project.priorities.splice($index, 1);">
 							<input type="text" class="form-control" name="raFormInputProjectStatus" data-ng-model="priority.name" required minlength="2" maxlength="50">
 							<select class="form-control" data-ng-model="priority.color" required>
 								<option value="red" data-ng-selected="priority.color == 'red'">red</option>
@@ -37,6 +48,7 @@
 								<option value="blue" data-ng-selected="priority.color == 'blue'">blue</option>
 								<option value="gray" data-ng-selected="priority.color == 'gray'">gray</option>
 							</select>
+							<span ng-click="removePriority(priority)"></span>
 						</li>
 						<li><button type="submit" data-ng-click="addPriority()" class="btn btn-default">Add Priority</button></li>
 					</ul>

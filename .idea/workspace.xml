@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccc66d94-2774-427c-9d83-29b1c6d3182d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/app.js" afterPath="$PROJECT_DIR$/public/app/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/global.css" afterPath="$PROJECT_DIR$/public/css/global.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/helpers.js" afterPath="$PROJECT_DIR$/public/scripts/helpers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/projects/project.html" afterPath="$PROJECT_DIR$/public/app/components/projects/project.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/projects/projectController.js" afterPath="$PROJECT_DIR$/public/app/components/projects/projectController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/tickets/ticket.html" afterPath="$PROJECT_DIR$/public/app/components/tickets/ticket.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/tickets/ticketEdit.html" afterPath="$PROJECT_DIR$/public/app/components/tickets/ticketEdit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/tickets/ticketEditController.js" afterPath="$PROJECT_DIR$/public/app/components/tickets/ticketEditController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/users/usersService.js" afterPath="$PROJECT_DIR$/public/app/components/users/usersService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/projects/projectEdit.html" afterPath="$PROJECT_DIR$/public/app/components/projects/projectEdit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/projects/projectEditController.js" afterPath="$PROJECT_DIR$/public/app/components/projects/projectEditController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/components/tickets/ticketNewController.js" afterPath="$PROJECT_DIR$/public/app/components/tickets/ticketNewController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pmapp.iws" />
@@ -33,28 +33,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ticketEditController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/components/tickets/ticketEditController.js">
+      <file leaf-file-name="project.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/components/projects/project.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="30" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
+            <state line="15" column="73" selection-start="420" selection-end="463" vertical-scroll-proportion="-7.1025643" vertical-offset="173" max-vertical-offset="1410">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ticketM.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/tickets/ticketM.js">
+      <file leaf-file-name="projectEdit.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/components/projects/projectEdit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="18" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+            <state line="50" column="60" selection-start="2876" selection-end="2876" vertical-scroll-proportion="-15.384615" vertical-offset="900" max-vertical-offset="1950">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ticketEdit.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/app/components/tickets/ticketEdit.html">
+      <file leaf-file-name="global.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/global.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="125" selection-start="855" selection-end="855" vertical-scroll-proportion="0.41714948" vertical-offset="0" max-vertical-offset="1020">
+            <state line="198" column="9" selection-start="2663" selection-end="2663" vertical-scroll-proportion="0.0" vertical-offset="2235" max-vertical-offset="3300">
+              <folding>
+                <element signature="e#11#29#0" expanded="false" />
+                <element signature="e#54#91#0" expanded="false" />
+                <element signature="e#98#136#0" expanded="false" />
+                <element signature="e#153#189#0" expanded="false" />
+                <element signature="e#194#216#0" expanded="false" />
+                <element signature="e#226#292#0" expanded="false" />
+                <element signature="e#310#327#0" expanded="false" />
+                <element signature="e#347#399#0" expanded="false" />
+                <element signature="e#424#654#0" expanded="false" />
+                <element signature="e#685#720#0" expanded="false" />
+                <element signature="e#751#835#0" expanded="false" />
+                <element signature="e#864#906#0" expanded="false" />
+                <element signature="e#925#999#0" expanded="false" />
+                <element signature="e#1017#1085#0" expanded="false" />
+                <element signature="e#1115#1132#0" expanded="false" />
+                <element signature="e#1161#1175#0" expanded="false" />
+                <element signature="e#1224#1279#0" expanded="false" />
+                <element signature="e#1350#1364#0" expanded="false" />
+                <element signature="e#1393#1457#0" expanded="false" />
+                <element signature="e#1478#1496#0" expanded="false" />
+                <element signature="e#1517#1739#0" expanded="false" />
+                <element signature="e#1758#1781#0" expanded="false" />
+                <element signature="e#1802#1832#0" expanded="false" />
+                <element signature="e#1856#1890#0" expanded="false" />
+                <element signature="e#1909#1937#0" expanded="false" />
+                <element signature="e#1955#1992#0" expanded="false" />
+                <element signature="e#2011#2044#0" expanded="false" />
+                <element signature="e#2061#2089#0" expanded="false" />
+                <element signature="e#2108#2138#0" expanded="false" />
+                <element signature="e#2157#2182#0" expanded="false" />
+                <element signature="e#2198#2224#0" expanded="false" />
+                <element signature="e#2241#2264#0" expanded="false" />
+                <element signature="e#2280#2297#0" expanded="false" />
+                <element signature="e#2316#2338#0" expanded="false" />
+                <element signature="e#2354#2419#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projectEditController.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/components/projects/projectEditController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="6" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1710">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projectR.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/projects/projectR.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="83" column="54" selection-start="1890" selection-end="1890" vertical-scroll-proportion="1.0" vertical-offset="1860" max-vertical-offset="4590">
               <folding />
             </state>
           </provider>
@@ -81,22 +135,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/app/modules/angular-drag-and-drop-lists.min.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/public/app/components/tickets/ticketNewController.js" />
-        <option value="$PROJECT_DIR$/api/tickets/ticketR.js" />
-        <option value="$PROJECT_DIR$/api/projects/projectR.js" />
         <option value="$PROJECT_DIR$/public/app/mainTpl.html" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/public/app/components/users/usersService.js" />
         <option value="$PROJECT_DIR$/public/app/components/tickets/ticketEditController.js" />
-        <option value="$PROJECT_DIR$/public/css/global.css" />
-        <option value="$PROJECT_DIR$/public/app/components/projects/project.html" />
-        <option value="$PROJECT_DIR$/public/app/components/projects/projectController.js" />
         <option value="$PROJECT_DIR$/public/app/components/tickets/ticket.html" />
         <option value="$PROJECT_DIR$/api/tickets/ticketM.js" />
         <option value="$PROJECT_DIR$/public/app/app.js" />
         <option value="$PROJECT_DIR$/public/app/components/tickets/ticketEdit.html" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/public/scripts/helpers.js" />
+        <option value="$PROJECT_DIR$/public/app/components/tickets/ticketNewController.js" />
+        <option value="$PROJECT_DIR$/public/app/components/projects/project.html" />
+        <option value="$PROJECT_DIR$/public/app/components/projects/projectController.js" />
+        <option value="$PROJECT_DIR$/public/css/global.css" />
+        <option value="$PROJECT_DIR$/public/app/components/projects/projectEdit.html" />
+        <option value="$PROJECT_DIR$/public/app/components/projects/projectEditController.js" />
+        <option value="$PROJECT_DIR$/api/projects/projectR.js" />
       </list>
     </option>
   </component>
@@ -133,6 +187,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -162,6 +217,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pmapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ra-projects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -219,28 +292,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pmapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ra-projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -267,7 +318,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tickets" />
+              <option name="myItemId" value="projects" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -299,13 +350,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tickets" />
+              <option name="myItemId" value="projects" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -427,11 +477,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30095038" sideWeight="0.59450895" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30095038" sideWeight="0.59450895" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20749736" sideWeight="0.69904965" order="0" side_tool="false" content_ui="combo" />
@@ -496,114 +546,130 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/app/components/users/usersService.js">
+    <entry file="file://$PROJECT_DIR$/api/settings/settingsC.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="39" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1560">
-          <folding />
-        </state>
+        <state line="24" column="44" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="2250" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/global.css">
+    <entry file="file://$PROJECT_DIR$/public/app/components/tickets/ticketEdit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="187" column="0" selection-start="2435" selection-end="2435" vertical-scroll-proportion="0.0" vertical-offset="4785" max-vertical-offset="5850">
+        <state line="12" column="125" selection-start="855" selection-end="855" vertical-scroll-proportion="0.41714948" vertical-offset="0" max-vertical-offset="1020" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/tickets/ticketM.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="18" selection-start="205" selection-end="205" vertical-scroll-proportion="0.22950819" vertical-offset="0" max-vertical-offset="915" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/priorities/priorityM.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="2" selection-start="247" selection-end="247" vertical-scroll-proportion="0.29508197" vertical-offset="0" max-vertical-offset="915" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="39" selection-start="348" selection-end="348" vertical-scroll-proportion="-14.0" vertical-offset="0" max-vertical-offset="3600" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/projects/projectNewController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/tickets/ticketEditController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="82" selection-start="772" selection-end="804" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1080" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="47" selection-start="3214" selection-end="3214" vertical-scroll-proportion="0.0" vertical-offset="3105" max-vertical-offset="4890" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/tickets/ticketNewController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="98" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/projects/projectController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="45" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/components/projects/project.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="36" selection-start="569" selection-end="569" vertical-scroll-proportion="-7.6923075" vertical-offset="360" max-vertical-offset="1410">
+        <state line="15" column="73" selection-start="420" selection-end="463" vertical-scroll-proportion="-7.1025643" vertical-offset="173" max-vertical-offset="1410">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/tickets/ticket.html">
+    <entry file="file://$PROJECT_DIR$/public/css/global.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="177" selection-end="177" vertical-scroll-proportion="-0.7692308" vertical-offset="0" max-vertical-offset="600">
+        <state line="198" column="9" selection-start="2663" selection-end="2663" vertical-scroll-proportion="0.0" vertical-offset="2235" max-vertical-offset="3300">
+          <folding>
+            <element signature="e#11#29#0" expanded="false" />
+            <element signature="e#54#91#0" expanded="false" />
+            <element signature="e#98#136#0" expanded="false" />
+            <element signature="e#153#189#0" expanded="false" />
+            <element signature="e#194#216#0" expanded="false" />
+            <element signature="e#226#292#0" expanded="false" />
+            <element signature="e#310#327#0" expanded="false" />
+            <element signature="e#347#399#0" expanded="false" />
+            <element signature="e#424#654#0" expanded="false" />
+            <element signature="e#685#720#0" expanded="false" />
+            <element signature="e#751#835#0" expanded="false" />
+            <element signature="e#864#906#0" expanded="false" />
+            <element signature="e#925#999#0" expanded="false" />
+            <element signature="e#1017#1085#0" expanded="false" />
+            <element signature="e#1115#1132#0" expanded="false" />
+            <element signature="e#1161#1175#0" expanded="false" />
+            <element signature="e#1224#1279#0" expanded="false" />
+            <element signature="e#1350#1364#0" expanded="false" />
+            <element signature="e#1393#1457#0" expanded="false" />
+            <element signature="e#1478#1496#0" expanded="false" />
+            <element signature="e#1517#1739#0" expanded="false" />
+            <element signature="e#1758#1781#0" expanded="false" />
+            <element signature="e#1802#1832#0" expanded="false" />
+            <element signature="e#1856#1890#0" expanded="false" />
+            <element signature="e#1909#1937#0" expanded="false" />
+            <element signature="e#1955#1992#0" expanded="false" />
+            <element signature="e#2011#2044#0" expanded="false" />
+            <element signature="e#2061#2089#0" expanded="false" />
+            <element signature="e#2108#2138#0" expanded="false" />
+            <element signature="e#2157#2182#0" expanded="false" />
+            <element signature="e#2198#2224#0" expanded="false" />
+            <element signature="e#2241#2264#0" expanded="false" />
+            <element signature="e#2280#2297#0" expanded="false" />
+            <element signature="e#2316#2338#0" expanded="false" />
+            <element signature="e#2354#2419#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/projects/projectEdit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="60" selection-start="2876" selection-end="2876" vertical-scroll-proportion="-15.384615" vertical-offset="900" max-vertical-offset="1950">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/tickets/ticketNewController.js">
+    <entry file="file://$PROJECT_DIR$/public/app/components/projects/projectEditController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
+        <state line="37" column="6" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1710">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/tickets/ticketsService.js">
+    <entry file="file://$PROJECT_DIR$/api/projects/projectR.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2190">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/projects/projectController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="9" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="1380">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/mainTpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="83" selection-start="2131" selection-end="2131" vertical-scroll-proportion="-15.550725" vertical-offset="277" max-vertical-offset="2100">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/tickets/ticketR.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="103" selection-start="488" selection-end="504" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3750">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/settings/settingsM.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="25" selection-start="76" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="47" selection-start="3214" selection-end="3214" vertical-scroll-proportion="0.0" vertical-offset="3105" max-vertical-offset="4890">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="40" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0" vertical-offset="580" max-vertical-offset="3630">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/settings/settingsC.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="44" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="2250">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/tickets/ticketEditController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="30" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/tickets/ticketM.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="18" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/tickets/ticketEdit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="125" selection-start="855" selection-end="855" vertical-scroll-proportion="0.41714948" vertical-offset="0" max-vertical-offset="1020">
+        <state line="83" column="54" selection-start="1890" selection-end="1890" vertical-scroll-proportion="1.0" vertical-offset="1860" max-vertical-offset="4590">
           <folding />
         </state>
       </provider>

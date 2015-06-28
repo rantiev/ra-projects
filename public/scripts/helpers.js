@@ -5,7 +5,7 @@ Date.prototype.monthNames = [
 	"October", "November", "December"
 ];
 
-Date.prototype.getMonthName = function() {
+Date.prototype.getMonthName = function () {
 	return this.monthNames[this.getMonth()];
 };
 Date.prototype.getShortMonthName = function () {

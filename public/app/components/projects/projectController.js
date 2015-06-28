@@ -3,10 +3,10 @@ myApp.controller('projectController', ['toaster', '$state', '$rootScope', '$scop
 	$scope.project = project.data;
 	$scope.tickets = tickets.data;
 
-	$scope.lists = {};
+	$scope.lists = [];
 
-	$scope.project.statuses.forEach(function (status) {
-		$scope.lists[status._id] = [];
+	$scope.project.statuses.forEach(function (status, i) {
+		$scope.lists[i] = [];
 	});
 
 	$scope.tickets.forEach(function (ticket) {
@@ -15,26 +15,19 @@ myApp.controller('projectController', ['toaster', '$state', '$rootScope', '$scop
 			ticket.color = _.find($scope.project.priorities, {_id: ticket.priority}).color;
 		}
 
-		if($scope.lists[ticket.status]) {
-			$scope.lists[ticket.status].push(ticket);
+		var index = _.findIndex($scope.project.statuses, {_id: ticket.status});
+		if(~index) {
+			$scope.lists[index].push(ticket);
 		}
 	});
 
-	$scope.changeTicketStatus = function (ticket, statusID) {
+	$scope.changeTicketStatus = function (ticket, index) {
 
-		var originalTicket = _.find($scope.tickets, {_id: ticket._id});
+		ticket.status = $scope.project.statuses[index]._id;
+		ticketsService.update(ticket);
 
-		if (originalTicket) {
-			originalTicket.status = statusID;
-			ticketsService.update(originalTicket);
-		}
-
+		return ticket;
 	}
-
-	$scope.dropCallback = function (event, index, item, external, type, allowedType) {
-		$scope.logListEvent('dropped at', event, index, external, type);
-		return item;
-	};
 
 	$rootScope.currentProject = $scope.project;
 

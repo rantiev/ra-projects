@@ -24,7 +24,7 @@ myApp.controller('ticketNewController', ['toaster', 'ticketsService', 'project',
 
 		var ticket = ticketsService.create($scope.ticket);
 		ticket.then(function(){
-			$state.go('main.private.projects');
+			$state.go('main.private.project', {id: $scope.project._id });
 			toaster.pop("success", "", "Ticket has been created", 2000);
 		});
 	}

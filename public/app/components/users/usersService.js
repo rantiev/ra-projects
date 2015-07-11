@@ -1,4 +1,4 @@
-myApp.service('usersService', function ($http) {
+myApp.service('usersService', ['toaster', '$http', function (toaster, $http) {
 
 	this.login = function (data) {
 		return $http.post('/login', data)
@@ -13,10 +13,10 @@ myApp.service('usersService', function ($http) {
 	this.register = function (data) {
 		return $http.post('/user', data)
 			.success(function (data, status, headers, config) {
-				console.log('User created');
+				toaster.pop("success", "", data, 3000);
 			})
 			.error(function (data, status, headers, config) {
-				console.log('error: user wasn\'t created!');
+				toaster.pop("error", "", data, 3000);
 			});
 	}
 
@@ -44,4 +44,4 @@ myApp.service('usersService', function ($http) {
 
 	}
 
-});
+}]);

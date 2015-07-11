@@ -1,20 +1,20 @@
-var express = require('express');
-var router = express.Router();
 var SettingsM = require('./settingsM');
 
-router.get('/settings', function (req, res) {
+module.exports = function (mainRouter, role) {
 
-	SettingsM.findOne(function (err, settings) {
+	mainRouter.get('/settings', role.can('loggedIn'), function (req, res) {
 
-		if (err) {
-			res.status(404).send('Please Login!');
-			return;
-		}
+		SettingsM.findOne(function (err, settings) {
 
-		res.status(200).json(settings);
+			if (err) {
+				res.status(404).send('Please Login!');
+				return;
+			}
+
+			res.status(200).json(settings);
+
+		});
 
 	});
 
-});
-
-module.exports = router;
+};

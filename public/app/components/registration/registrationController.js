@@ -1,4 +1,4 @@
-myApp.controller('registrationController', ['toaster', 'usersService', '$state', '$scope', function (toaster, usersService, $state, $scope) {
+myApp.controller('registrationController', ['usersService', '$state', '$scope', function (usersService, $state, $scope) {
 
 	$scope.submitForm = function () {
 
@@ -10,13 +10,8 @@ myApp.controller('registrationController', ['toaster', 'usersService', '$state',
 			password: $scope.raFormInputPassword,
 			remember: $scope.raFormInputRememberMe
 		}).then(
-			function success(response){
+			function success(res){
 				$state.go('main.private.projects');
-				toaster.pop("success", "", "You have registered succesfully", 3000);
-			},
-			function error(reason){
-				$state.go('main.public.registration');
-				toaster.pop("error", "", "You have not registered succesfully", 3000);
 			}
 		);
 

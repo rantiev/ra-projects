@@ -1,23 +1,28 @@
 var session = require('express-session');
 
 var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
+var LocalStrategy = require('passport-local').Strategy;;
 
 var bcrypt = require('bcrypt-nodejs');
+
+var role = require('./appSetupRoles');
 
 var rememberMe = require('./modules/rememberMe');
 var createAccessToken = require('./modules/createAccessToken');
 
-var UserM = require('./api/users/userM');
-var UserR = require('./api/users/userR');
-var SettingsR = require('./api/settings/settingsR');
-var SettingsC = require('./api/settings/settingsC');
-var ProjectR = require('./api/projects/projectR');
-var TicketR = require('./api/tickets/ticketR');
-
 module.exports = function (app, express, config) {
 
 	var mainRouter = express.Router();
+
+	var UserM = require('./api/users/userM');
+	var UserR = require('./api/users/userR')(mainRouter, role);
+
+	var SettingsR = require('./api/settings/settingsR')(mainRouter, role);
+	var SettingsC = require('./api/settings/settingsC');
+
+	var ProjectR = require('./api/projects/projectR')(mainRouter, role);
+
+	var TicketR = require('./api/tickets/ticketR')(mainRouter, role);
 
 	app.use(session({
 		saveUninitialized: false,
@@ -42,6 +47,7 @@ module.exports = function (app, express, config) {
 		});
 
 	}));
+
 	passport.serializeUser(function (user, done) {
 		if (user) {
 			createAccessToken(user, done);
@@ -49,6 +55,7 @@ module.exports = function (app, express, config) {
 			done(null, false);
 		}
 	});
+
 	passport.deserializeUser(function (token, done) {
 		UserM.findOne({accessToken: token}, function (err, user) {
 			if (err) {
@@ -82,9 +89,5 @@ module.exports = function (app, express, config) {
 	});
 
 	app.use('/', mainRouter);
-	app.use('/', UserR);
-	app.use('/', SettingsR);
-	app.use('/', ProjectR);
-	app.use('/', TicketR);
 
 };

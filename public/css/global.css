@@ -39,12 +39,12 @@ ul {
 	height:100%;
 }
 
+.ra-users-list,
 .ra-projects-list {
 	list-style: none;
 	margin: 0 -10px;
 	padding:0;
 }
-
 .ra-projects-list-item {
 	display: inline-block;
 	max-width: 320px;
@@ -72,6 +72,24 @@ ul {
 .ra-projects-list-item img {
 	max-width: 150px;
 	max-height: 100px;
+}
+
+
+.ra-users-list li {
+	display: inline-block;
+	width: 200px;
+	margin: 10px;
+	position: relative;
+	cursor: pointer;
+	text-align: center;
+}
+
+.ra-users-list li img {
+	display: block;
+	width:100px;
+	margin:0 auto;
+	border:2px solid lightblue;
+	border-radius:50%;
 }
 
 .ra-tickets-grid {
@@ -215,4 +233,8 @@ ul[dnd-list] > li {
 
 .ra-reordering-list li:not(:last-child) span:before {
 	content: "\e014";
+}
+
+.ra-margin-15 {
+	margin: 15px;
 }

@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
-var m = require('../../appConfig').strings.user;
-var v = require('../../appHelpers').validation;
+var m = require('../../modules/appConfig').strings.user;
+var v = require('../../modules/appHelpers').validation;
 
 var userSchema = mongoose.Schema({
 	email: {
@@ -27,6 +27,9 @@ var userSchema = mongoose.Schema({
 		type: String,
 		validate: v.password(m.invalidPassword),
 		required: true
+	},
+	role: {
+		type: String
 	},
 	accessToken: {
 		type: String

@@ -1,6 +1,6 @@
 var bcrypt = require('bcrypt-nodejs');
 var rememberMe = require('../../modules/rememberMe');
-var m = require('../../appConfig').strings.user;
+var m = require('../../modules/appConfig').strings.user;
 
 
 var UserM = require('./userM');
@@ -39,6 +39,23 @@ module.exports = function (mainRouter, role) {
 				res.status(404).send(m.registration.unknownError);
 			}
 
+		});
+
+	});
+
+	mainRouter.get('/user/:id?', role.can('loggedIn'), function (req, res) {
+
+		var criteria = req.params.id ? {_id: req.params.id} : null;
+
+		UserM.findOne(criteria, function (err, user) {
+			if (err) {
+				res.status(404).send('User wasn\'t obtained!');
+				return;
+			}
+
+			user.password = undefined;
+
+			res.status(200).json(user);
 		});
 
 	});

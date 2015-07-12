@@ -63,6 +63,36 @@ var myApp = angular.module('ra-projects', ['ui.router', 'ui.layout', 'toaster', 
 				abstract: true,
 				templateUrl: 'app/privateTpl.html'
 			})
+			.state('main.private.users', {
+				url: '/users',
+				templateUrl: 'app/components/users/users.html',
+				controller: 'usersController',
+				resolve: {
+					users: function (usersService) {
+						return usersService.getAll();
+					}
+				}
+			})
+			.state('main.private.user', {
+				url: '/user/:id',
+				templateUrl: 'app/components/users/user.html',
+				controller: 'userController',
+				resolve: {
+					user: function ($stateParams, usersService) {
+						return usersService.getOne($stateParams.id);
+					}
+				}
+			})
+			.state('main.private.user-edit', {
+				url: '/user/:id/edit',
+				templateUrl: 'app/components/users/userEdit.html',
+				controller: 'userEditController',
+				resolve: {
+					user: function ($stateParams, usersService) {
+						return usersService.getOne($stateParams.id);
+					}
+				}
+			})
 			.state('main.private.projects', {
 				url: '/projects',
 				templateUrl: 'app/components/projects/projects.html',

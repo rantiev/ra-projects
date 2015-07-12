@@ -1,0 +1,12 @@
+<h1>{{user.fname}} {{user.lname}} <a class="ra-title-btn" data-ui-sref="main.private.user-edit({id: user._id})"><i class="glyphicon glyphicon-edit"></i></a></h1>
+<ul class="ra-users-list">
+	<li>
+		<img src="#" class="ra-users-list-item-image" data-ng-src="/uploads/users/{{user.image}}" alt="{{user.fname}} {{user.lname}}"/>
+	</li>
+</ul>
+<p>
+	<strong>Role:</strong> {{user.role}}
+</p>
+<p>
+	<strong>Email:</strong> {{user.email}}
+</p>

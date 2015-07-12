@@ -1,12 +1,14 @@
 var path = require('path');
 var express = require('express');
 var mongoose = require('mongoose');
-var config = require('./appConfig');
+var config = require('./modules/appConfig');
 
 var app = express();
 
-require('./appConfigure')(app, express);
-require('./appSetupRouting')(app, express, config);
+require('./modules/appInstall');
+require('./modules/appConfigure')(app, express, config);
+require('./modules/appSetupRouting')(app, express, config);
+require('./modules/appErrorsHandling')(app);
 
 mongoose.connect('mongodb://127.0.0.1:27017/ra-projects');
 mongoose.connection.on('error', console.error.bind(console, 'connection error:'));

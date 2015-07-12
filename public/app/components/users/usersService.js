@@ -23,9 +23,6 @@ myApp.service('usersService', ['toaster', '$http', function (toaster, $http) {
 	this.getAll = function(){
 
 		return $http.get('/users')
-			.success(function (data, status, headers, config) {
-				console.log('Users obtained!');
-			})
 			.error(function (data, status, headers, config) {
 				console.log('error: Users weren\'t obtained!');
 			});;
@@ -35,9 +32,6 @@ myApp.service('usersService', ['toaster', '$http', function (toaster, $http) {
 	this.getOne = function(id){
 
 		return $http.get('/user/' + id)
-			.success(function (data, status, headers, config) {
-				console.log('User obtained!');
-			})
 			.error(function (data, status, headers, config) {
 				console.log('error: User weren\'t obtained!');
 			});;

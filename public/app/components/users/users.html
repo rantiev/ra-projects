@@ -1,0 +1,7 @@
+<ul class="ra-users-list">
+	<li ng-repeat="user in users">
+		<a ui-sref="main.private.user({id: user._id})">
+			<span class="ra-users-list-item-image"><img src="#" data-ng-src="/uploads/users/{{user.image}}" alt="{{user.fname}} {{user.lname}}"/></span> {{user.fname}} {{user.lname}}
+		</a>
+	</li>
+</ul>

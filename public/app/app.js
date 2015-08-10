@@ -10,6 +10,7 @@ var myApp = angular.module('ra-projects', ['ui.router', 'ui.layout', 'toaster', 
 				})
 					.then(
 					function success(response) {
+						$rootScope.currentUser = response.data;
 						$rootScope.userCan = 1;
 						if (toState.public) {
 							$state.go('main.private.projects');
@@ -18,7 +19,6 @@ var myApp = angular.module('ra-projects', ['ui.router', 'ui.layout', 'toaster', 
 						$rootScope.currentState = toState;
 					},
 					function error(reason) {
-						$rootScope.userCan = 0;
 						if (!toState.public) {
 							$state.go('main.public.login');
 						}
@@ -28,11 +28,11 @@ var myApp = angular.module('ra-projects', ['ui.router', 'ui.layout', 'toaster', 
 			});
 
 		}]
-	)
+)
 
 	.config(['$stateProvider', '$httpProvider', '$urlRouterProvider', function ($stateProvider, $httpProvider, $urlRouterProvider) {
 
-		$httpProvider.defaults.headers.delete = { "Content-Type": "application/json;charset=utf-8" };
+		$httpProvider.defaults.headers.delete = {"Content-Type": "application/json;charset=utf-8"};
 
 		$urlRouterProvider.otherwise('/login');
 
@@ -147,7 +147,7 @@ var myApp = angular.module('ra-projects', ['ui.router', 'ui.layout', 'toaster', 
 					project: function ($stateParams, projectsService) {
 						return projectsService.getOne($stateParams.pid);
 					},
-					users: function($stateParams, usersService){
+					users: function ($stateParams, usersService) {
 						return usersService.getAll();
 					}
 				}
@@ -170,19 +170,24 @@ var myApp = angular.module('ra-projects', ['ui.router', 'ui.layout', 'toaster', 
 					ticket: function ($stateParams, ticketsService) {
 						return ticketsService.getOne($stateParams.id);
 					},
-					users: function($stateParams, usersService){
+					users: function ($stateParams, usersService) {
 						return usersService.getAll();
 					}
 				}
 			})
-		/*.state('main.private.settings', {
-		 url: '/settings',
-		 templateUrl: 'app/components/settings/settings.html',
-		 controller: 'settingsController'
-		 })
-		 .state('main.private.profile', {
-		 url: '/profile',
-		 templateUrl: 'app/components/profile/profile.html',
-		 controller: 'profileController'
-		 })*/
+			.state('main.private.settings', {
+				url: '/settings',
+				templateUrl: 'app/components/settings/settings.html',
+				controller: 'settingsController',
+				resolve: {
+					settings: function ($stateParams, settingsService) {
+						return settingsService.get();
+					}
+				}
+			})
+			/*.state('main.private.profile', {
+				url: '/profile',
+				templateUrl: 'app/components/profile/profile.html',
+				controller: 'profileController'
+			})*/
 	}]);

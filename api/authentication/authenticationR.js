@@ -14,21 +14,25 @@ module.exports = function (app, mainRouter, role) {
 		passwordField: 'password'
 	}, function (username, password, done) {
 
-		UserM.findOne({email: username}, function (err, user) {
-			if (err) {
+		UserM.findOneQ({email: username})
+			.then(function(user){
+
+				if (user && bcrypt.compareSync(password, user.password)) {
+					done(null, user);
+				} else {
+					done(null, false);
+				}
+
+			})
+			.catch(function(err){
 				done(err);
-			}
-			if (user && bcrypt.compareSync(password, user.password)) {
-				done(null, user);
-			} else {
-				done(null, false);
-			}
-		});
+			});
 
 	}));
 
 	passport.serializeUser(function (user, done) {
 		if (user) {
+			console.log('Create token!');
 			createAccessToken(user, done);
 		} else {
 			done(null, false);
@@ -36,16 +40,23 @@ module.exports = function (app, mainRouter, role) {
 	});
 
 	passport.deserializeUser(function (token, done) {
-		UserM.findOne({accessToken: token}, function (err, user) {
-			if (err) {
+
+		console.log('Here is token:', token);
+
+		UserM.findOneQ({accessToken: token})
+			.then(function(user){
+
+				if (user) {
+					done(null, user);
+				} else {
+					done(null, false);
+				}
+
+			})
+			.catch(function(err){
 				done(err);
-			}
-			if (user) {
-				done(null, user);
-			} else {
-				done(null, false);
-			}
-		});
+			});
+
 	});
 
 	app.use(passport.initialize());
@@ -64,9 +75,15 @@ module.exports = function (app, mainRouter, role) {
 
 		if (!req.user) {
 			res.status(404).send('Please Login!');
+			return;
 		}
 
-		res.status(200).send();
+		var currentUser = {
+			id: req.user._id,
+			role: req.user.role
+		};
+
+		res.status(200).json(currentUser);
 	});
 
 };

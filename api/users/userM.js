@@ -1,8 +1,8 @@
-var mongoose = require('mongoose');
+var mongooseQ = require('mongoose-q')();
 var m = require('../../modules/appConfig').strings.user;
 var v = require('../../modules/appHelpers').validation;
 
-var userSchema = mongoose.Schema({
+var userSchema = new mongooseQ.Schema({
 	email: {
 		type: String,
 		validate: v.email(m.invalidEmail),
@@ -36,4 +36,4 @@ var userSchema = mongoose.Schema({
 	}
 });
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongooseQ.model('User', userSchema);

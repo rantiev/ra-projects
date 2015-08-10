@@ -1,8 +1,9 @@
 var path = require('path');
 var bodyParser = require('body-parser');
 var session = require('express-session');
+var MongoStore = require('connect-mongo')(session);
 
-module.exports = function (app, express, config) {
+module.exports = function (app, express, config, mongoose) {
 
 	app.use(bodyParser.urlencoded({
 		extended: true
@@ -15,7 +16,8 @@ module.exports = function (app, express, config) {
 	app.use(session({
 		saveUninitialized: false,
 		resave: false,
-		secret: config.sessionsSecretToken
+		secret: config.sessionsSecretToken,
+		store: new MongoStore({ mongooseConnection: mongoose.connection })
 	}));
 
 };

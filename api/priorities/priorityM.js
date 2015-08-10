@@ -1,9 +1,9 @@
-var mongoose = require('mongoose');
+var mongooseQ = require('mongoose-q')();
 
-var prioritySchema = mongoose.Schema({
+var prioritySchema = new mongooseQ.Schema({
 	name: String,
 	color: String,
 	order: Number
 });
 
-module.exports = mongoose.model('Priority', prioritySchema);
+module.exports = mongooseQ.model('Priority', prioritySchema);

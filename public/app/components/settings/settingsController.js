@@ -1,5 +1,5 @@
-myApp.controller('settingsController', ['toaster', 'usersService', '$state', '$scope', function (toaster, usersService, $state, $scope) {
+myApp.controller('settingsController', ['toaster', 'settingsService', '$state', '$scope', 'settings', function (toaster, settingsService, $state, $scope, settings) {
 
-
+	$scope.settings = settings.data;
 
 }]);

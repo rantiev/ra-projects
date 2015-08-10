@@ -1,10 +1,10 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+var mongooseQ = require('mongoose-q')();
+var Schema = mongooseQ.Schema;
 
 var User = require('../users/userM');
 var Project = require('../projects/projectM');
 
-var ticketSchema = mongoose.Schema({
+var ticketSchema = new mongooseQ.Schema({
 	label: String,
 	name: String,
 	description: String,
@@ -15,4 +15,4 @@ var ticketSchema = mongoose.Schema({
 	project: { type: Schema.Types.ObjectId, ref: 'Project' }
 });
 
-module.exports = mongoose.model('Ticket', ticketSchema);
+module.exports = mongooseQ.model('Ticket', ticketSchema);

@@ -38,4 +38,16 @@ myApp.service('usersService', ['toaster', '$http', function (toaster, $http) {
 
 	}
 
+	this.remove = function(id){
+
+		return $http.delete('/user/' + id)
+			.success(function (data, status, headers, config) {
+				toaster.pop("success", "", data, 3000);
+			})
+			.error(function (data, status, headers, config) {
+				toaster.pop("error", "", data, 3000);
+			});;
+
+	}
+
 }]);

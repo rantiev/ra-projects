@@ -1,8 +1,8 @@
-var mongoose = require('mongoose');
+var mongooseQ = require('mongoose-q')();
 
-var statusSchema = mongoose.Schema({
+var statusSchema = new mongooseQ.Schema({
 	name: String,
 	order: Number
 });
 
-module.exports = mongoose.model('Status', statusSchema);
+module.exports = mongooseQ.model('Status', statusSchema);

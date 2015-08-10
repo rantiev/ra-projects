@@ -13,8 +13,8 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav" ng-if="userCan">
 					<li ui-sref-active="active"><a ui-sref="main.private.projects">Projects</a></li>
-					<li ui-sref-active="active"><a ui-sref="main.private.users">Users</a></li>
-					<li ui-sref-active="active"><a ui-sref="main.private.settings">Settings</a></li>
+					<li ui-sref-active="active" ng-if="currentUser.role === 'admin'"><a ui-sref="main.private.users">Users</a></li>
+					<li ui-sref-active="active" ng-if="currentUser.role === 'admin'"><a ui-sref="main.private.settings">Settings</a></li>
 					<li ng-if="currentState.name == 'main.private.projects'">
 						<p class="navbar-btn">
 							<a class="btn btn-small btn-default" ui-sref="main.private.project-new">

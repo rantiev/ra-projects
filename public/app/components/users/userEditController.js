@@ -17,10 +17,9 @@ myApp.controller('userEditController', ['toaster', 'usersService', 'user', '$sta
 	$scope.removeUser = function () {
 
 		if(confirm("Do you really want to remove the user?")){
-			var promise = usersService.delete($scope.user);
+			var promise = usersService.remove($scope.user._id);
 			promise.then(function () {
 				$state.go('main.private.users');
-				toaster.pop("success", "", "User has been removed", 2000);
 			});
 		};
 

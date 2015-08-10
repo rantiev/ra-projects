@@ -1,9 +1,9 @@
-var mongoose = require('mongoose');
+var mongooseQ = require('mongoose-q')();
 
-var settingsSchema = mongoose.Schema({
+var settingsSchema = new mongooseQ.Schema({
 	statuses: Array,
 	priorities: Array,
 	incrementTickets: Number
 });
 
-module.exports = mongoose.model('Settings', settingsSchema);
+module.exports = mongooseQ.model('Settings', settingsSchema);

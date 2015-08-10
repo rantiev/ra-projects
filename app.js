@@ -6,7 +6,7 @@ var config = require('./modules/appConfig');
 var app = express();
 
 require('./modules/appInstall');
-require('./modules/appConfigure')(app, express, config);
+require('./modules/appConfigure')(app, express, config, mongoose);
 require('./modules/appSetupRouting')(app, express, config);
 require('./modules/appErrorsHandling')(app);
 

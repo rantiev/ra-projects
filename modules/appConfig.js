@@ -7,6 +7,10 @@ module.exports = {
 				success: 'You have registered successfully',
 				unknownError: 'There are some errors, You have not registered succesfully!',
 			},
+			update: {
+				success: 'User has been updated!',
+				failure: 'User has\'t been updated!'
+			},
 			login: {
 				success: 'User was logged In!',
 				failure: 'User wasn\'t logged In!'
@@ -20,6 +24,7 @@ module.exports = {
 			invalidLname: 'Invalid Last Name',
 			invalidImage: 'Invalid Image',
 			invalidPassword: 'Invalid Password',
+			invalidConfirmPasswod: 'Invalid Confirm Password field'
 		},
 		project: {
 			create: {

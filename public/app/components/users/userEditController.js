@@ -1,4 +1,4 @@
-myApp.controller('userEditController', ['toaster', 'usersService', 'user', '$state', '$scope', function (toaster, usersService, user, $state, $scope) {
+angular.module('ra-projects').controller('userEditController', ['toaster', 'usersService', 'user', '$state', '$rootScope', '$scope', function (toaster, usersService, user, $state, $rootScope, $scope) {
 
 	$scope.inProgress = 0;
 
@@ -10,7 +10,8 @@ myApp.controller('userEditController', ['toaster', 'usersService', 'user', '$sta
 
 		user.then(function () {
 			$state.go('main.private.user', {id: $scope.user._id });
-			toaster.pop("success", "", "User has been updated", 2000);
+		}).catch(function(){
+			$scope.inProgress = 0;
 		});
 	}
 
@@ -19,7 +20,9 @@ myApp.controller('userEditController', ['toaster', 'usersService', 'user', '$sta
 		if(confirm("Do you really want to remove the user?")){
 			var promise = usersService.remove($scope.user._id);
 			promise.then(function () {
-				$state.go('main.private.users');
+				$rootScope.userCan = 0;
+				$rootScope.currentUser = {};
+				$state.go('main.public.login');
 			});
 		};
 

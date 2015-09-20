@@ -1,4 +1,4 @@
-myApp.service('usersService', ['toaster', '$http', function (toaster, $http) {
+angular.module('ra-projects').service('usersService', ['toaster', '$http', function (toaster, $http) {
 
 	this.login = function (data) {
 		return $http.post('/login', data)
@@ -20,6 +20,18 @@ myApp.service('usersService', ['toaster', '$http', function (toaster, $http) {
 			});
 	}
 
+	this.update = function(user){
+
+		return $http.put('/user/' + user._id, user)
+			.success(function (data, status, headers, config) {
+				toaster.pop("success", "", data, 3000);
+			})
+			.error(function (data, status, headers, config) {
+				toaster.pop("error", "", data, 3000);
+			});;
+
+	}
+
 	this.getAll = function(){
 
 		return $http.get('/users')
@@ -34,7 +46,7 @@ myApp.service('usersService', ['toaster', '$http', function (toaster, $http) {
 		return $http.get('/user/' + id)
 			.error(function (data, status, headers, config) {
 				console.log('error: User weren\'t obtained!');
-			});;
+			});
 
 	}
 

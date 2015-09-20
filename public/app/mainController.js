@@ -1,4 +1,4 @@
-myApp.controller('mainController', ['$state', '$scope', function($state, $scope){
+angular.module('ra-projects').controller('mainController', ['$state', '$scope', function($state, $scope){
 
 	$scope.raSettings = {
 		projectImages: [

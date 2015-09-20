@@ -1,4 +1,4 @@
-myApp.service('projectsService', ['$http', function($http){
+angular.module('ra-projects').service('projectsService', ['$http', function($http){
 
 	this.create = function(project){
 

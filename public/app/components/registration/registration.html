@@ -2,7 +2,7 @@
 
 	<div class="row">
 		<div class="col-sm-2 col-sm-offset-5">
-			<form>
+			<form name="raRegistrationForm">
 				<div class="form-group">
 					<select class="form-control" data-ng-model="raFormInputImage" required>
 						<option selected="selected">Please Select an Image</option>
@@ -24,7 +24,8 @@
 					<input type="password" class="form-control" name="raFormInputPassword" id="raFormInputPassword" placeholder="Password" data-ng-model="raFormInputPassword" required minlength="6" maxlength="50">
 				</div>
 				<div class="form-group">
-					<input type="password" class="form-control" name="raFormInputPasswordConfirm" id="raFormInputPasswordConfirm" placeholder="Confirm Password" data-ng-model="raFormInputPasswordConfirm" required minlength="6" maxlength="50">
+					<input type="password" class="form-control" name="raFormInputPasswordConfirm" id="raFormInputPasswordConfirm" placeholder="Confirm Password" data-ng-model="raFormInputPasswordConfirm" required minlength="6" maxlength="50" data-ra-compare-to="raFormInputPassword">
+					<div class="ra-input-validation-error" ng-show="raRegistrationForm.raFormInputPasswordConfirm.$error.raCompareTo">Password and Confirm Password fields don't match!</div>
 				</div>
 				<div class="checkbox">
 					<label>

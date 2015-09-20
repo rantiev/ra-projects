@@ -42,6 +42,39 @@ module.exports = function (mainRouter, role) {
 			});
 	});
 
+	mainRouter.put('/user/:id?', role.can('updateUser'), function (req, res) {
+
+		var criteria = req.params.id ? {_id: req.params.id} : null;
+		var userData = req.body;
+
+
+		UserM.findOneQ(criteria)
+			.then(function (user) {
+
+				user.fname = userData.fname;
+				user.lname = userData.lname;
+				user.email = userData.email;
+
+				if (userData.password && userData.password !== userData.passwordConfirm) {
+					res.status(404).send(m.invalidConfirmPasswod);
+					return;
+				}
+
+				user.saveQ()
+					.then(function(){
+						res.status(200).json(m.update.success);
+					})
+					.catch(function(err){
+						res.status(404).send(m.update.failure);
+					});
+
+			})
+			.catch(function (err) {
+				res.status(404).send(m.notObtained1);
+			})
+
+	});
+
 	mainRouter.get('/user/:id?', role.can('loggedIn'), function (req, res) {
 
 		var criteria = req.params.id ? {_id: req.params.id} : null;
@@ -49,6 +82,7 @@ module.exports = function (mainRouter, role) {
 		UserM.findOneQ(criteria)
 			.then(function (user) {
 				user.password = undefined;
+				user.accessToken = undefined;
 				res.status(200).json(user);
 			})
 			.catch(function (err) {
@@ -57,12 +91,13 @@ module.exports = function (mainRouter, role) {
 
 	});
 
-	mainRouter.get('/users', role.can('loggedIn'), function (req, res) {
+	mainRouter.get('/users', role.is('loggedIn'), function (req, res) {
 
 		UserM.findQ({})
 			.then(function (users) {
 				users.forEach(function (user) {
 					user.password = undefined;
+					user.accessToken = undefined;
 				});
 				res.status(200).json(users);
 			})
@@ -72,17 +107,15 @@ module.exports = function (mainRouter, role) {
 
 	});
 
-	mainRouter.delete('/user/:id?', role.can('loggedIn'), function (req, res) {
+	mainRouter.delete('/user/:id?', role.can('removeUser'), function (req, res) {
 
 		UserM.findByIdAndRemoveQ(req.params.id)
-			.then(function(user){
+			.then(function (user) {
 				res.status(200).send(m.removed);
 			})
-			.catch(function(err){
+			.catch(function (err) {
 				res.status(404).send(m.notRemoved);
 			})
 	});
 
 }
-
-//TODO: Implement user update route

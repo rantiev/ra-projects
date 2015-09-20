@@ -12,7 +12,15 @@ role.use('loggedIn', function (req) {
 });
 
 role.use('admin', function (req) {
-	return req.user.rol === 'admin';
+	return req.user.role === 'admin';
+});
+
+role.use('updateUser', function (req) {
+	return req.user.role === 'admin' || req.user._id == req.params.id;
+});
+
+role.use('removeUser', function (req) {
+	return req.user.role === 'admin' || req.user._id == req.params.id;
 });
 
 module.exports = role;

@@ -1,4 +1,4 @@
-var myApp = angular.module('ra-projects', ['ui.router', 'ui.layout', 'toaster', 'dndLists'])
+var myApp = angular.module('ra-projects', ['ui.router', 'toaster', 'dndLists'])
 	.run(['$rootScope', '$state', '$timeout', '$http',
 		function ($rootScope, $state, $timeout, $http) {
 
@@ -109,7 +109,7 @@ var myApp = angular.module('ra-projects', ['ui.router', 'ui.layout', 'toaster', 
 				controller: 'projectNewController',
 				resolve: {
 					settings: function (settingsService) {
-						return settingsService.getSettings();
+						return settingsService.get();
 					}
 				}
 			})

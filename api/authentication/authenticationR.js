@@ -1,5 +1,5 @@
 var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;;
+var LocalStrategy = require('passport-local').Strategy;
 var rememberMe = require('../../modules/rememberMe');
 var createAccessToken = require('../../modules/createAccessToken');
 
@@ -32,7 +32,6 @@ module.exports = function (app, mainRouter, role) {
 
 	passport.serializeUser(function (user, done) {
 		if (user) {
-			console.log('Create token!');
 			createAccessToken(user, done);
 		} else {
 			done(null, false);
@@ -40,9 +39,6 @@ module.exports = function (app, mainRouter, role) {
 	});
 
 	passport.deserializeUser(function (token, done) {
-
-		console.log('Here is token:', token);
-
 		UserM.findOneQ({accessToken: token})
 			.then(function(user){
 

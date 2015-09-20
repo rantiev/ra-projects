@@ -1,4 +1,4 @@
-myApp.controller('ticketEditController', ['toaster', 'ticketsService', 'ticket', 'users', '$state', '$scope', function (toaster, ticketsService, ticket, users, $state, $scope) {
+angular.module('ra-projects').controller('ticketEditController', ['toaster', 'ticketsService', 'ticket', 'users', '$state', '$scope', function (toaster, ticketsService, ticket, users, $state, $scope) {
 
 	$scope.inProgress = 0;
 

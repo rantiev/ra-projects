@@ -1,4 +1,4 @@
-myApp.controller('ticketController', ['toaster', 'ticket', '$state', '$scope', function (toaster, ticket, $state, $scope) {
+angular.module('ra-projects').controller('ticketController', ['toaster', 'ticket', '$state', '$scope', function (toaster, ticket, $state, $scope) {
 
 	$scope.ticket = ticket.data;
 	$scope.ticket.status = _.find($scope.ticket.project.statuses, {_id: $scope.ticket.status});

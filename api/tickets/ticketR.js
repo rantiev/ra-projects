@@ -40,7 +40,7 @@ module.exports = function (mainRouter, role) {
 
 		delete ticketData._id;
 
-		TicketM.saveQ(criteria)
+		TicketM.updateQ(criteria, ticketData)
 			.then(function(ticket){
 				res.status(201).json(ticket);
 			})

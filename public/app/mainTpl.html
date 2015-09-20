@@ -47,6 +47,7 @@
 								</a>
 							</p>
 						</li>
+						<li ng-if="userCan"><a data-ui-sref="main.private.user({id: currentUser.id})">Profile</a></li>
 						<li ng-if="userCan"><a href="/logout">Logout</a></li>
 						<li ng-if="!userCan && currentState.name !== 'main.public.registration'"><a ui-sref="main.public.registration">Registration</a></li>
 						<li ng-if="!userCan && currentState.name !== 'main.public.login'"><a ui-sref="main.public.login">Login</a></li>

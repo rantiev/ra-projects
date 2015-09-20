@@ -1,4 +1,4 @@
-myApp.service('settingsService', ['$http', function($http){
+angular.module('ra-projects').service('settingsService', ['$http', function($http){
 
 	this.get = function (data) {
 

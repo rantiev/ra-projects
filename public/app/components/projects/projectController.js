@@ -1,4 +1,4 @@
-myApp.controller('projectController', ['toaster', '$state', '$rootScope', '$scope', 'ticketsService', 'project', 'tickets' , function (toaster, $state, $rootScope, $scope, ticketsService, project, tickets) {
+angular.module('ra-projects').controller('projectController', ['toaster', '$state', '$rootScope', '$scope', 'ticketsService', 'project', 'tickets' , function (toaster, $state, $rootScope, $scope, ticketsService, project, tickets) {
 
 	$scope.project = project.data;
 	$scope.tickets = tickets.data;

@@ -1,4 +1,4 @@
-myApp.controller('loginController', ['toaster', 'usersService', '$state', '$rootScope', '$scope', function (toaster, usersService, $state, $rootScope, $scope) {
+angular.module('ra-projects').controller('loginController', ['toaster', 'usersService', '$state', '$rootScope', '$scope', function (toaster, usersService, $state, $rootScope, $scope) {
 
 	$scope.submitForm = function () {
 

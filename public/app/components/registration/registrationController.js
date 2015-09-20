@@ -1,6 +1,10 @@
-myApp.controller('registrationController', ['usersService', '$state', '$scope', function (usersService, $state, $scope) {
+angular.module('ra-projects').controller('registrationController', ['usersService', '$state', '$scope', function (usersService, $state, $scope) {
 
 	$scope.submitForm = function () {
+
+		if($scope.raFormInputPassword !== $scope.raFormInputConfirmPassword) {
+			//return;
+		}
 
 		usersService.register({
 			email: $scope.raFormInputEmail,
